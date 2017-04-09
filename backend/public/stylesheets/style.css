@@ -1,8 +1,28 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+
 }
 
-a {
-  color: #00B7FF;
+
+#main-header {
+  padding: 0;
+  border-bottom: 2px #F88E79 solid;
+}
+
+.col-md-1, .col-md-6, .col-md-4 {
+  color: #757575;
+  padding: 30px;
+  text-align: right;
+  font-family: 'Arial Rounded MT Bold', sans-serif;
+}
+
+.col-md-6, .col-md-4 {
+  padding-bottom: 15px;
+}
+
+.col-md-4 {
+  margin-top: 78px;
+}
+
+.col-md-6 {
+  text-align: left;
 }
