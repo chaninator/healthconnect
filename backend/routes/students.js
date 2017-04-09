@@ -40,12 +40,18 @@ router.post('/', function(req, res, next) {
   });
 });
 
-// update a student
+// update a student records
 router.patch('/', function(req, res, next) {
   Student.findById({_id: req.body.id}, function(err, student) {
     if (err) console.log(err);
 
     student.name = req.body.name || student.name;
+    student.image = req.body.image || student.image;
+    student.history = req.body.history || student.history;
+    student.allergies = req.body.allergies || student.allergies;
+    student.medications = req.body.medications || student.medications;
+    student.immunizations = req.body.immunizations || student.immunizations;
+
     student.save(function(err, student) {
       if (err) console.log(err);
 
