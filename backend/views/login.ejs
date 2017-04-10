@@ -1,0 +1,40 @@
+<% include layout %>
+
+    </head>
+
+    <body>
+
+        <div id="root" style="width: 280px; margin: 40px auto; padding: 10px;">
+
+            <script>
+                // Construct an instance of Auth0Lock with your clientId and aut0 domain name
+                var options = {
+                    theme: {
+                        logo: 'http://vignette2.wikia.nocookie.net/steven-universe/images/8/8a/Sanic_by_lazyturtle-d5h8ww3.png',
+                        primaryColor: '#8AD9BB',
+                        foregroundColor: "#000000"
+                    },
+                    closable: false,
+                    languageDictionary: {
+                        emailInputPlaceholder: "nurse@email.com",
+                        title: "Health Connect"
+                    },
+                    auth: {
+                        redirectUrl: '<%= env.AUTH0_CALLBACK_URL %>',
+                        responseType: 'code',
+                        params: {
+                            scope: 'openid name email picture'
+                        }
+                    }
+                };
+
+
+                var lock = new Auth0Lock(
+                    '<%= env.AUTH0_CLIENT_ID %>', '<%= env.AUTH0_DOMAIN%>', options);
+                // Show lock's login widget
+                lock.show();
+            </script>
+            
+
+
+        </div>
