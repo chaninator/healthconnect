@@ -23,7 +23,6 @@ var schema = new mongoose.Schema({
   guardian_name: { type: String, required: true},
   guardian_number: { type: String, required: true},
   guardian_email: { type: String, required: true},
-  // guardian: [{ type: Schema.ObjedId, ref: 'Guardian'}],
   report: [reportSchema]
 });
 
