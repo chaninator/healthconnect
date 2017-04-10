@@ -70,7 +70,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 app.use('/user', user);
-app.use('/users', users);
 app.use('/guardians', guardians);
 app.use('/nurses', nurses);
 
