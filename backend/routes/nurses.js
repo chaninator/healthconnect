@@ -18,17 +18,6 @@ router.get('/:id', function(req, res, next) {
     });
 });
 
-router.get('/:id', function(req, res, next) {
-  Report.find({
-      _id: req.param.id
-    }, function(err, post){
-        if (err) {
-          console.log(err);
-        }
-
-        res.json(report)
-  });
-});
 
 router.patch('/', function(req, res, next) {
     Student.findById(req.body.id, function(err, name) {
