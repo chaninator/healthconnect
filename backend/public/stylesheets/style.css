@@ -56,3 +56,14 @@ footer {
 .back-pic {
   background: cover;
 }
+
+.btn-users {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  text-align: center;
+}
+
+div img {
+  margin: 10px;
+}
