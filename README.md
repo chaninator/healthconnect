@@ -1,2 +1,2 @@
 # healthconnect
-Health Connect WDI/UXUI Project
+Health Connect WDI/UXDI Project
