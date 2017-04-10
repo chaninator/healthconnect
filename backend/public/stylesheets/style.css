@@ -1,5 +1,5 @@
 body {
-
+  font-family: 'Arial Rounded MT Bold', sans-serif;
 }
 
 
@@ -12,13 +12,12 @@ body {
   color: #757575;
   padding: 30px;
   text-align: right;
-  font-family: 'Arial Rounded MT Bold', sans-serif;
   padding-bottom: 15px;
 }
 
 
 .right {
-  margin-top: 78px;
+  margin-top: 73px;
   padding-right: 5px;
   margin-right: 88px;
 }
@@ -37,6 +36,16 @@ section {
 
 .kiwi {
   background-size: cover;
+}
+
+.opac {
+  height: 350px;
+  margin: 0 93px 0 93px;
+  background-color: #ffffff;
+  opacity: 0.7;
+  border-radius: 0 0 10px 10px;
+  text-align: center;
+  padding-top: 50px;
 }
 
 footer {
