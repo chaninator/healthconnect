@@ -8,7 +8,7 @@ var mongoose = require('mongoose');
 
 var index = require('./routes/index');
 var users = require('./routes/users');
-var guardians = require('.routes/guardians');
+var guardians = require('./routes/guardians');
 var nurses = require('./routes/nurses');
 
 var app = express();
