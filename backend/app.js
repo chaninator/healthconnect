@@ -2,6 +2,7 @@ require('dotenv').config({silent: true});
 
 var cors = require('cors');
 var express = require('express');
+
 var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
@@ -11,6 +12,8 @@ var bodyParser = require('body-parser');
 var index = require('./routes/index');
 var users = require('./routes/users');
 var students = require('./routes/students');
+var reports = require('./routes/reports');
+// var doctors = require('./routes/doctors');
 
 
 var app = express();
@@ -36,6 +39,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', index);
 app.use('/users', users);
 app.use('/students', students);
+app.use('/reports', reports);
+// app.use('/doctors', doctors);
 
 
 // catch 404 and forward to error handler

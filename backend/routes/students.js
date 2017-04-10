@@ -1,3 +1,4 @@
+
 var express = require('express');
 var router = express.Router();
 
@@ -18,11 +19,28 @@ router.post('/', function(req, res, next) {
   var newStudent = new Student({
     name: req.body.name,
     image: req.body.image,
+    dob: req.body.dob,
     history: req.body.history,
     allergies: req.body.allergies,
     medications: req.body.medications,
-    immunizations: req.body.immunizations
+    immunizations: req.body.immunizations,
+    guardian_name: req.body.guardian_name,
+    guardian_number: req.body.guardian_number,
+    guardian_email: req.body.guardian_email,
+    reports: req.body.reports
+    // report: req.body.reportId
   });
+
+  // var Student = mongoose.model('Student', schema);
+  // var Student = new Student({ reports: [] })
+  // student.report[0].date = '';
+  // student.report[0].vitals = '';
+  // student.report[0].symptoms = '';
+  // student.report[0].call_notes = '';
+  // student.report[0].treatment_plans = '';
+  // student.report[0].date = '';
+  // student.save(callback);
+
 
   newStudent.save(function(err, student) {
     if (err) {
@@ -76,3 +94,4 @@ router.delete('/', function(req, res, next) {
 });
 
 module.exports = router;
+//---------------------------------------------------------------------
