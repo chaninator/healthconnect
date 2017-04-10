@@ -18,6 +18,8 @@ dotenv.load();
 
 var routes = require('./routes/index');
 var user = require('./routes/user');
+var guardians = require('./routes/guardians');
+var nurses = require('./routes/nurses');
 
 // This will configure Passport to use Auth0
 var strategy = new Auth0Strategy({
@@ -45,6 +47,8 @@ passport.deserializeUser(function(user, done) {
 
 var app = express();
 
+mongoose.connect(process.env.HEALTH_DB);
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -66,6 +70,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 app.use('/user', user);
+app.use('/users', users);
+app.use('/guardians', guardians);
+app.use('/nurses', nurses);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

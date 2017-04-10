@@ -13,6 +13,18 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Health Connect', env: env });
 });
 
+router.get('/nurse', function(req, res, next) {
+  res.render('nurse');
+});
+
+router.get('/guardian', function(req, res, next) {
+  res.render('guardian');
+});
+
+router.get('/doctor', function(req, res, next) {
+  res.render('doctor');
+});
+
 router.get('/login',
   function(req, res){
     res.render('login', { env: env });
