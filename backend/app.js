@@ -1,9 +1,6 @@
+require('dotenv').config();
 
-require('dotenv').config({silent: true});
-
-var cors = require('cors');
 var express = require('express');
-
 var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
@@ -14,14 +11,14 @@ var dotenv = require('dotenv');
 var passport = require('passport');
 var Auth0Strategy = require('passport-auth0');
 var mongoose = require('mongoose');
+var passport = require('passport');
+var Auth0Strategy = require('passport-auth0');
 
 dotenv.load();
 
-var app = express();
-mongoose.connect(process.env.HEALTH_DB);
-
 var routes = require('./routes/index');
 var user = require('./routes/user');
+// var guardians = require('./routes/guardians');
 var nurses = require('./routes/nurses');
 
 // This will configure Passport to use Auth0
@@ -44,21 +41,18 @@ passport.serializeUser(function(user, done) {
   done(null, user);
 });
 
+passport.deserializeUser(function(user, done) {
+  done(null, user);
+});
 
+var app = express();
 
-
-var index = require('./routes/index');
-var students = require('./routes/students');
-var reports = require('./routes/reports');
-// var doctors = require('./routes/doctors')
-
-
+mongoose.connect(process.env.HEALTH_DB);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
-app.use(cors());
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
@@ -74,14 +68,11 @@ app.use(passport.initialize());
 app.use(passport.session());
 app.use(express.static(path.join(__dirname, 'public')));
 
-
 app.use('/', routes);
 app.use('/user', user);
-app.use('/students', students);
-app.use('/reports', reports);
+//app.use('/users', users);
+// app.use('/guardians', guardians);
 app.use('/nurses', nurses);
-// app.use('/doctors', doctors);
-
 
 
 // catch 404 and forward to error handler
