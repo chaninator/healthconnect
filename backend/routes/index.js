@@ -26,8 +26,12 @@ router.get('/logout', function(req, res){
 router.get('/callback',
   passport.authenticate('auth0', { failureRedirect: '/url-if-something-fails' }),
   function(req, res) {
+    // res.json(res);
     res.redirect(req.session.returnTo || '/user');
+    console.log('req4: ', req);
+    console.log('res4: ', res);
   });
+
 
 
 module.exports = router;
