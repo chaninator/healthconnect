@@ -17,7 +17,7 @@ router.get('/nurse', function(req, res, next) {
   res.render('nurse');
 });
 
-router.get('/student', function(req, res, next) {
+router.get('/guardian', function(req, res, next) {
   res.render('guardian');
 });
 
@@ -43,7 +43,5 @@ router.get('/callback',
     console.log('req4: ', req);
     console.log('res4: ', res);
   });
-
-
 
 module.exports = router;
