@@ -91,6 +91,8 @@ div img {
 
 .modal-body {
   min-height: 300px;
+  max-height: calc(100vh - 210px);
+  overflow-y: auto;
 }
 
 .vertical-alignment-helper {
