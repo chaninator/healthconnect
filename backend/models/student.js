@@ -1,6 +1,4 @@
 var mongoose = require('mongoose');
-// var Guardian = require('./guardian');
-// var Report = mongoose.model('Report', reportSchema);
 ObjectId = mongoose.Schema.ObjectId;
 
 var reportSchema = new mongoose.Schema({
@@ -28,5 +26,5 @@ var schema = new mongoose.Schema({
 
 
 var Student = mongoose.model('Student', schema);
-// var Reports = mongoose.model('Report', reportSchema);
+var Report = mongoose.model('Report', reportSchema);
 module.exports = Student;

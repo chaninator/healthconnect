@@ -7,19 +7,23 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var session = require('express-session');
+
 var dotenv = require('dotenv');
+
 var passport = require('passport');
 var Auth0Strategy = require('passport-auth0');
 var mongoose = require('mongoose');
-var passport = require('passport');
-var Auth0Strategy = require('passport-auth0');
+
 
 dotenv.load();
 
 var routes = require('./routes/index');
 var user = require('./routes/user');
-// var guardians = require('./routes/guardians');
+var students = require('./routes/students');
 var nurses = require('./routes/nurses');
+var reports = require('./routes/reports');
+var doctors = require('./routes/doctors');
+
 
 // This will configure Passport to use Auth0
 var strategy = new Auth0Strategy({
@@ -72,8 +76,11 @@ app.use('/', routes);
 app.use('/user', user);
 
 // app.use('/users', users);
-// app.use('/guardians', guardians);
+app.use('/students', students);
 app.use('/nurses', nurses);
+app.use('/reports', reports);
+app.use('/doctors', doctors);
+
 
 
 // catch 404 and forward to error handler

@@ -1,8 +1,8 @@
 
 var express = require('express');
 var router = express.Router();
-
 var Student = require('../models/student');
+// var models = require('../models/student');
 
 router.get('/', function(req, res, next) {
   Student.find({}, function(err, student) {
@@ -31,17 +31,6 @@ router.post('/', function(req, res, next) {
     // report: req.body.reportId
   });
 
-  // var Student = mongoose.model('Student', schema);
-  // var Student = new Student({ reports: [] })
-  // student.report[0].date = '';
-  // student.report[0].vitals = '';
-  // student.report[0].symptoms = '';
-  // student.report[0].call_notes = '';
-  // student.report[0].treatment_plans = '';
-  // student.report[0].date = '';
-  // student.save(callback);
-
-
   newStudent.save(function(err, student) {
     if (err) {
       res.status(500).send({
@@ -68,7 +57,11 @@ router.patch('/', function(req, res, next) {
     student.history = req.body.history || student.history;
     student.allergies = req.body.allergies || student.allergies;
     student.medications = req.body.medications || student.medications;
+    student.guardian_name = req.body.guardian_name || student.guardian_name;
     student.immunizations = req.body.immunizations || student.immunizations;
+    student.guardian_email = req.body.guardian_email || student.guardian_email;
+    student.guardian_number = req.body.guardian_number || student.guardian_number;
+
 
     student.save(function(err, student) {
       if (err) console.log(err);
