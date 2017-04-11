@@ -76,6 +76,13 @@ a {
 >>>>>>> doctor started
 }
 
+h4 {
+  font-size: 145%;
+  display: inline;
+  font-weight: bold;
+  color: #8AD9BB
+}
+
 .modal-desc {
   font-size: 20px;
   text-align: left;
@@ -137,6 +144,11 @@ a {
 
 .modal-dialog {
   width: 1000px;
+}
+
+.studentInfo {
+  font-size: 16px;
+  text-decoration: none;
 }
 
 .modal-content {
