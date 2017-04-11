@@ -16,9 +16,9 @@
   </form>
   <ul id="funny">
     <p>Students</p>
-    <li><a href="/studentProfile/<%= student0id%>"><%= student0 %></a></li>
-    <li><a href="/studentProfile/<%= student1id%>"><%= student1 %></a></li>
-    <li><a href="/studentProfile/<%= student2id%>"><%= student2 %></a></li>
+    <% for (var i=0, x=students.length; i<x; i++) { %>
+      <li><a href="/studentProfile/<%= students[i]._id%>"><p><%= students[i].name %></p></a></li>
+    <% } %>
   </ul>
 </div>
 </div>
