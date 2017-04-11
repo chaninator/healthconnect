@@ -4,11 +4,9 @@ html, body {
 }
 
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: 'Arial Rounded MT Bold', sans-serif;
 }
 
-<<<<<<< HEAD
 #main-header {
   padding: 0;
   border-bottom: 2px #F88E79 solid;
@@ -34,8 +32,7 @@ body {
 }
 
 section {
-  height: 100vh;
-  min-height: 800px;
+  height: 700px;
   background-image: url(../images/kiwi.svg);
   background-size: cover;
 }
@@ -45,7 +42,7 @@ section {
 }
 
 .opac {
-  height: 90%;
+  height: 350px;
   margin: 0 93px 0 93px;
   background-color: #ffffff;
   opacity: 0.7;
@@ -72,6 +69,7 @@ footer {
 
 div img {
   margin: 10px;
+<<<<<<< HEAD
 =======
 a {
   color: #00B7FF;
@@ -144,4 +142,6 @@ a {
 .modal-content {
   max-height: calc(100vh - 210px);
   overflow-y: auto;
+=======
+>>>>>>> added styles
 }
