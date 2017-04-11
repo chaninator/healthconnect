@@ -25,6 +25,10 @@ router.get('/doctor', function(req, res, next) {
   res.render('doctor');
 });
 
+router.get('/createreport', function(req, res, next) {
+  res.render('createreport');
+});
+
 router.get('/login',
   function(req, res){
     res.render('login', { env: env });

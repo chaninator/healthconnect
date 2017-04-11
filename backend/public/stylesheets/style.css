@@ -30,6 +30,7 @@ body {
 
 section {
   height: 700px;
+  min-height: 800px;
   background-image: url(../images/kiwi.svg);
   background-size: cover;
 }
@@ -66,4 +67,65 @@ footer {
 
 div img {
   margin: 10px;
+}
+
+.modal-desc {
+  font-size: 20px;
+  text-align: left;
+  padding: 10px 0;
+  border-top: 2px solid #8AD9BB;
+  border-bottom: 2px solid #8AD9BB;
+}
+
+.modal-footer, .modal-header {
+    border-top: none;
+    border-bottom: none;
+}
+
+.modal-text {
+  padding-left: 10px;
+}
+
+.modal-body {
+  min-height: 300px;
+}
+
+.vertical-alignment-helper {
+    display:table;
+    height: 100%;
+    width: 100%;
+    pointer-events:none;
+}
+
+.vertical-align-center {
+    /* To center vertically */
+    display: table-cell;
+    vertical-align: middle;
+    pointer-events:none;
+}
+
+.modal-content {
+    /* Bootstrap sets the size of the modal in the modal-dialog class, we need to inherit it */
+    width:inherit;
+    height:inherit;
+    /* To center horizontally */
+    margin: 0 auto;
+    pointer-events:all;
+}
+
+.modal-header {
+  margin-bottom: 100px;
+}
+
+.btn-primary {
+  background-color: #8AD9BB;
+  border-color: #8AD9BB;
+}
+
+.report-info {
+  text-align: left;
+}
+
+.modal-dialog {
+  width: 1000px;
 }
