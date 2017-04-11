@@ -32,7 +32,6 @@ router.get('/:id', function(req, res, next) {
 });
 
 
-
 router.patch('/', function(req, res, next) {
     Student.findById(req.body.id, function(err, name) {
         if (err) console.log(err);
