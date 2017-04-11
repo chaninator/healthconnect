@@ -72,8 +72,8 @@ div img {
   font-size: 20px;
   text-align: left;
   padding: 10px 0;
-  border-top: 2px solid green;
-  border-bottom: 2px solid green;
+  border-top: 2px solid #8AD9BB;
+  border-bottom: 2px solid #8AD9BB;
 }
 
 .modal-footer, .modal-header {
@@ -119,4 +119,8 @@ div img {
 .btn-primary {
   background-color: #8AD9BB;
   border-color: #8AD9BB;
+}
+
+.report-info {
+  text-align: left;
 }
