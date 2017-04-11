@@ -21,9 +21,14 @@ var routes = require('./routes/index');
 var user = require('./routes/user');
 var students = require('./routes/students');
 var nurses = require('./routes/nurses');
+<<<<<<< HEAD
 var reports = require('./routes/reports');
 var doctors = require('./routes/doctors');
 
+=======
+var studentProfile = require('./routes/studentProfile');
+var createreport = require('./routes/createreport');
+>>>>>>> Rob
 
 // This will configure Passport to use Auth0
 var strategy = new Auth0Strategy({
@@ -76,6 +81,7 @@ app.use('/', routes);
 app.use('/user', user);
 
 
+<<<<<<< HEAD
 
 app.use('/students', students);
 
@@ -83,6 +89,12 @@ app.use('/nurses', nurses);
 app.use('/reports', reports);
 app.use('/doctors', doctors);
 
+=======
+// app.use('/users', users);
+// app.use('/guardians', guardians);
+
+// app.use('/nurses', nurses);
+>>>>>>> Rob
 
 
 // catch 404 and forward to error handler
