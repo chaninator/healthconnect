@@ -1,0 +1,58 @@
+body {
+  font-family: 'Arial Rounded MT Bold', sans-serif;
+}
+
+
+#main-header {
+  padding: 0;
+  border-bottom: 2px #F88E79 solid;
+}
+
+.col-md-4, .col-md-6 {
+  color: #757575;
+  padding: 30px;
+  text-align: right;
+  padding-bottom: 15px;
+}
+
+
+.right {
+  margin-top: 73px;
+  padding-right: 5px;
+  margin-right: 88px;
+}
+
+.left {
+  text-align: left;
+  padding-left: 5px;
+  margin-left: 88px;
+}
+
+section {
+  height: 400px;
+  background-image: url(../images/kiwi.svg);
+  background-size: cover;
+}
+
+.kiwi {
+  background-size: cover;
+}
+
+.opac {
+  height: 350px;
+  margin: 0 93px 0 93px;
+  background-color: #ffffff;
+  opacity: 0.7;
+  border-radius: 0 0 10px 10px;
+  text-align: center;
+  padding-top: 50px;
+}
+
+footer {
+  height: 75px;
+  background-color: #B1748F;
+}
+
+.back-pic {
+  background: cover;
+}
