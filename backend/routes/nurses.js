@@ -5,9 +5,18 @@ var Student = require('../models/student');
 // var Report = require('../models/report');
 
 //var Report = require('../models/report');
+/*
+router.get('/:id', function(req, res, next) {
+  Student.find({}, function(err, students) {
+    if (err) console.log('Database err: ', err)
 
-
-
+    console.log('Students: ', students);
+    res.render('nurses', {
+      students: students
+    })
+  })
+})
+*/
 
 /* Get a student */
 router.get('/:id', function(req, res, next) {
