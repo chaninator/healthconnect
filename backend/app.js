@@ -81,7 +81,7 @@ app.use('/', routes);
 app.use('/user', user);
 
 
-<<<<<<< HEAD
+
 
 app.use('/students', students);
 
@@ -89,12 +89,12 @@ app.use('/nurses', nurses);
 app.use('/reports', reports);
 app.use('/doctors', doctors);
 
-=======
+
 // app.use('/users', users);
 // app.use('/guardians', guardians);
 
 // app.use('/nurses', nurses);
->>>>>>> Rob
+
 
 
 // catch 404 and forward to error handler
