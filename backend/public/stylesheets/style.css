@@ -4,9 +4,11 @@ html, body {
 }
 
 body {
-  font-family: 'Arial Rounded MT Bold', sans-serif;
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
+<<<<<<< HEAD
 #main-header {
   padding: 0;
   border-bottom: 2px #F88E79 solid;
@@ -70,6 +72,10 @@ footer {
 
 div img {
   margin: 10px;
+=======
+a {
+  color: #00B7FF;
+>>>>>>> doctor started
 }
 
 .modal-desc {

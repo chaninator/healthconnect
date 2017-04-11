@@ -1,8 +1,8 @@
 var express = require('express');
-var passport = require('passport');
 var router = express.Router();
 var Student = require('../models/student');
 
+<<<<<<< HEAD
 var env = {
   AUTH0_CLIENT_ID: process.env.AUTH0_CLIENT_ID,
   AUTH0_DOMAIN: process.env.AUTH0_DOMAIN,
@@ -90,4 +90,11 @@ router.get('/callback',
     console.log('res4: ', res);
   });
 
+=======
+/* GET home page. */
+router.get('/', function(req, res, next) {
+  res.render('index', { title: 'Express' });
+});
+
+>>>>>>> doctor started
 module.exports = router;

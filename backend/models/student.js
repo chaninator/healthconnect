@@ -1,5 +1,5 @@
 var mongoose = require('mongoose');
-ObjectId = mongoose.Schema.ObjectId;
+var ObjectId = mongoose.Schema.ObjectId;
 
 var reportSchema = new mongoose.Schema({
   date: { type: String, required: true },
@@ -26,9 +26,5 @@ var schema = new mongoose.Schema({
 
 
 var Student = mongoose.model('Student', schema);
-<<<<<<< HEAD
 var Report = mongoose.model('Report', reportSchema);
-=======
-// var Reports = mongoose.model('Report', reportSchema);
->>>>>>> updated to match dev_branch
 module.exports = Student;

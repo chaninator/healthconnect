@@ -14,6 +14,13 @@ router.get('/', function(req, res, next) {
   })
 });
 
+router.get('/:name', function(req, res, next) {
+  Student.find({ 'name': req.params.name}, (err, students) => {
+    if (err) console.log(err)
+    res.json(students)
+  });
+});
+
 router.post('/', function(req, res, next) {
 
   var newStudent = new Student({
