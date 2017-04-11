@@ -30,6 +30,7 @@ body {
 
 section {
   height: 700px;
+  min-height: 800px;
   background-image: url(../images/kiwi.svg);
   background-size: cover;
 }
@@ -72,8 +73,8 @@ div img {
   font-size: 20px;
   text-align: left;
   padding: 10px 0;
-  border-top: 2px solid green;
-  border-bottom: 2px solid green;
+  border-top: 2px solid #8AD9BB;
+  border-bottom: 2px solid #8AD9BB;
 }
 
 .modal-footer, .modal-header {
@@ -86,7 +87,7 @@ div img {
 }
 
 .modal-body {
-  height: 200px;
+  min-height: 300px;
 }
 
 .vertical-alignment-helper {
@@ -119,4 +120,12 @@ div img {
 .btn-primary {
   background-color: #8AD9BB;
   border-color: #8AD9BB;
+}
+
+.report-info {
+  text-align: left;
+}
+
+.modal-dialog {
+  width: 1000px;
 }
