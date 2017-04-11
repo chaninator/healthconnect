@@ -13,15 +13,15 @@ var dotenv = require('dotenv');
 var passport = require('passport');
 var Auth0Strategy = require('passport-auth0');
 var mongoose = require('mongoose');
+var passport = require('passport');
+var Auth0Strategy = require('passport-auth0');
 
 dotenv.load();
 
 var routes = require('./routes/index');
 var user = require('./routes/user');
-var students = require('./routes/students');
+// var guardians = require('./routes/guardians');
 var nurses = require('./routes/nurses');
-var reports = require('./routes/reports');
-var doctors = require('./routes/doctors');
 
 var reports = require('./routes/reports');
 var doctors = require('./routes/doctors');
@@ -43,20 +43,25 @@ var strategy = new Auth0Strategy({
     // profile has all the information from the user
     return done(null, profile);
   });
+
 passport.use(strategy);
+
 // you can use this section to keep a smaller payload
 passport.serializeUser(function(user, done) {
   done(null, user);
 });
+
 passport.deserializeUser(function(user, done) {
   done(null, user);
 });
+
 var app = express();
+
 mongoose.connect(process.env.HEALTH_DB);
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
-
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
@@ -69,17 +74,18 @@ app.use(session({
   resave: true,
   saveUninitialized: true
 }));
-
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(express.static(path.join(__dirname, 'public')));
+
 app.use('/', routes);
 app.use('/user', user);
+
 // app.use('/users', users);
-app.use('/students', students);
+// app.use('/guardians', guardians);
+
 app.use('/nurses', nurses);
-app.use('/reports', reports);
-app.use('/doctors', doctors);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -88,8 +94,8 @@ app.use(function(req, res, next) {
   next(err);
 });
 
-
 // error handlers
+
 // development error handler
 // will print stacktrace
 if (app.get('env') === 'development') {
@@ -102,7 +108,6 @@ if (app.get('env') === 'development') {
   });
 }
 
-
 // production error handler
 // no stacktraces leaked to user
 app.use(function(err, req, res, next) {
@@ -112,4 +117,6 @@ app.use(function(err, req, res, next) {
     error: {}
   });
 });
+
+
 module.exports = app;
