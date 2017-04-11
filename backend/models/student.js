@@ -26,5 +26,9 @@ var schema = new mongoose.Schema({
 
 
 var Student = mongoose.model('Student', schema);
+<<<<<<< HEAD
 var Report = mongoose.model('Report', reportSchema);
+=======
+// var Reports = mongoose.model('Report', reportSchema);
+>>>>>>> updated to match dev_branch
 module.exports = Student;
