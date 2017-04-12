@@ -26,6 +26,8 @@ router.get('/nurses', function(req, res, next) {
   })
 });
 
+
+
 router.get('/studentProfile/:id', function(req, res, next) {
   Student.findById(req.params.id, function(err, student) {
     if (err) {
@@ -48,6 +50,7 @@ router.get('/studentProfile/:id', function(req, res, next) {
 })
 
 router.get('/createreport/:id', function(req, res, next) {
+  console.log(req.user);
   Student.findById(req.params.id, function(err, student) {
     if (err) { console.log('err: ', err) }
     res.render('createreport', {
@@ -55,6 +58,37 @@ router.get('/createreport/:id', function(req, res, next) {
       image: student.image
     })
   })
+})
+
+router.post('/createreport', function(req, res, next) {
+  var userId = req.user.identities[0].user_id;
+  var email = req.user._json.email;
+
+  console.log()
+  console.log('id is: ', req.params.id)
+  Student.findOne({
+    _id: req.params.id
+  }, function(err, student) {
+    console.log('student is: ', student)
+    student.report.push({
+      date: req.body.date,
+      vitals: req.body.vitals,
+      symptoms: req.body.symptoms,
+      notes: req.body.notes,
+    });
+
+    student.save(function(err, student) {
+      if (err) {
+        res.status(500).send({
+          status: 'Error',
+          error: err
+        });
+        console.log('Error: ', err);
+      }
+
+      res.json(student);
+    });
+  });
 })
 
 router.get('/guardian', function(req, res, next) {

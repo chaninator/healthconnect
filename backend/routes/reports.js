@@ -32,8 +32,7 @@ router.post('/', function(req, res, next) {
   });
 })
 
-router.post('/createreport', function(req, res, next) {
-/// showuld there be a module to give you the option to speak with a doctor. can choose to skip. then goes to notes section
+router.post('/', function(req, res, next) {
     console.log('id is: ', req.body.id)
     Student.findOne({
       _id: req.body.id
@@ -44,7 +43,6 @@ router.post('/createreport', function(req, res, next) {
         vitals: req.body.vitals,
         symptoms: req.body.symptoms,
         notes: req.body.notes,
-        // treatment_plan: req.body.treatment_plan
       });
 
       student.save(function(err, student) {
@@ -71,7 +69,7 @@ router.patch('/modifyreport', function(req, res, next) {
     student.report.forEach(function(report,index){
       if(report._id == req.body.reportid){
         console.log('match found!!!!!!!')
-        // report.date = req.body.date || report.date;
+        report.date = req.body.date || report.date;
         report.vitals = req.body.vitals || report.vitals;
         report.symptoms = req.body.symptoms || report.symptoms;
         report.notes = req.body.notes || report.notes;

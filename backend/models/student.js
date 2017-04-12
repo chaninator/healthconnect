@@ -1,12 +1,10 @@
 var mongoose = require('mongoose');
 var ObjectId = mongoose.Schema.ObjectId;
 
-// var date = dateFunction(){
-// return Date.now();
-// }
+
 
 var reportSchema = new mongoose.Schema({
-  date: { type: String },
+  date: {type: String, default: new Date()},
   vitals: { type: String, required: true },
   symptoms: { type: String, required: true },
   notes: { type: String, required: true },
