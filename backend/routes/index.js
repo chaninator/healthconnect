@@ -11,8 +11,6 @@ var env = {
 
 
 
-
-
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Health Connect', env: env });
@@ -72,10 +70,6 @@ router.get('/doctor', function(req, res, next) {
   res.render('doctor');
 });
 
-//router.get('/createreport', function(req, res, next) {
-//  res.render('createreport');
-//});
-
 router.get('/login',
   function(req, res){
     res.render('login', { env: env });
@@ -91,7 +85,7 @@ router.get('/callback',
   function(req, res) {
     // res.json(res);
     res.redirect(req.session.returnTo || '/user');
-    console.log('req4: ', req);
+    // console.log('req4: ', req);
     console.log('res4: ', res);
   });
 
