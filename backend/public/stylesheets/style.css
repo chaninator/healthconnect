@@ -1,11 +1,23 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  min-width: 75%;
+}
+
 body {
   font-family: 'Arial Rounded MT Bold', sans-serif;
 }
 
+.hc-logo {
+  border
+  z-index: 2;
+}
 
 #main-header {
   padding: 0;
   border-bottom: 2px #F88E79 solid;
+  height: 120px;
+  margin-bottom: 25px;
 }
 
 .col-md-4, .col-md-6 {
@@ -15,9 +27,8 @@ body {
   padding-bottom: 15px;
 }
 
-
 .right {
-  margin-top: 73px;
+  margin-top: 40px;
   padding-right: 5px;
   margin-right: 88px;
 }
@@ -26,13 +37,20 @@ body {
   text-align: left;
   padding-left: 5px;
   margin-left: 88px;
+  display: flex;
+  align-items: center;
 }
 
 section {
   height: 700px;
-  min-height: 800px;
   background-image: url(../images/kiwi.svg);
   background-size: cover;
+}
+
+.slogan{
+  color: #8AD9BB;
+  font-size: 18px;
+  padding-top: 30px;
 }
 
 .kiwi {
@@ -40,13 +58,14 @@ section {
 }
 
 .opac {
-  height: 350px;
+  height: 75%;
   margin: 0 93px 0 93px;
   background-color: #ffffff;
   opacity: 0.7;
-  border-radius: 0 0 10px 10px;
+  border-radius: 0 0 20px 20px;
   text-align: center;
   padding-top: 50px;
+  z-index: -1;
 }
 
 footer {
@@ -63,10 +82,22 @@ footer {
   justify-content: center;
   flex-direction: row;
   text-align: center;
+  margin-top: 200px;
 }
 
 div img {
   margin: 10px;
+}
+
+a {
+  color: #00B7FF;
+}
+
+h4 {
+  font-size: 145%;
+  display: inline;
+  font-weight: bold;
+  color: #8AD9BB
 }
 
 .modal-desc {
@@ -78,8 +109,8 @@ div img {
 }
 
 .modal-footer, .modal-header {
-    border-top: none;
-    border-bottom: none;
+  border-top: none;
+  border-bottom: none;
 }
 
 .modal-text {
@@ -88,29 +119,31 @@ div img {
 
 .modal-body {
   min-height: 300px;
+  max-height: calc(100vh - 210px);
+  overflow-y: auto;
 }
 
 .vertical-alignment-helper {
-    display:table;
-    height: 100%;
-    width: 100%;
-    pointer-events:none;
+  display: table;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
 }
 
 .vertical-align-center {
-    /* To center vertically */
-    display: table-cell;
-    vertical-align: middle;
-    pointer-events:none;
+  /* To center vertically */
+  display: table-cell;
+  vertical-align: middle;
+  pointer-events: none;
 }
 
 .modal-content {
-    /* Bootstrap sets the size of the modal in the modal-dialog class, we need to inherit it */
-    width:inherit;
-    height:inherit;
-    /* To center horizontally */
-    margin: 0 auto;
-    pointer-events:all;
+  /* Bootstrap sets the size of the modal in the modal-dialog class, we need to inherit it */
+  width: inherit;
+  height: inherit;
+  /* To center horizontally */
+  margin: 0 auto;
+  pointer-events: all;
 }
 
 .modal-header {
@@ -128,4 +161,95 @@ div img {
 
 .modal-dialog {
   width: 1000px;
+}
+
+.studentInfo {
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.modal-content {
+  max-height: calc(100vh - 210px);
+  overflow-y: auto;
+}
+
+.guardian-nav li {
+  list-style: none;
+  text-align: left;
+  margin: 0;
+  width: 12em;
+  border-top: 2px solid #8AD9BB;
+}
+
+li {
+  list-style: none;
+}
+
+.btn-signup {
+  color: #FFFFFF;
+  background-color: #F88E79;
+}
+
+.btn-login {
+  color: #8AD9BB;
+}
+
+.btn-signup, .btn-login {
+  font-size: 18px;
+  margin: 15px;
+  padding: 10px 25px;
+  border: 2px solid;
+  border-radius: 50px;
+}
+
+.btn-signup:hover, .btn-login:hover {
+  text-decoration: none;
+}
+
+.btn-login:hover {
+  background-color: #8AD9BB;
+  color: white;
+  border: 2px solid;
+  border-color: #8AD9BB
+}
+
+.btn-signup:hover {
+  background-color: #FFFFFF;
+  color: #F88E79;
+  border: 2px solid;
+  border-color: #F88E79
+}
+
+.welcome-text {
+  font-size: 35px;
+  padding-bottom: 15px;
+}
+
+.welcome-container {
+  width: 50%;
+  display: table;
+  margin: 0 auto;
+  padding-top: 30px;
+}
+
+.studentNav, ul{
+  list-style-type: none;
+}
+
+.studentNav, .nurseNav, .nurseNavBottom{
+  display: block;
+  text-align: left;
+  font-size: 26px;
+  border-bottom: solid 2px #8AD9BB;
+  color: black;
+  padding-bottom: 4px;
+}
+
+.nurseNavBottom, .studentNavBottom{
+  border-bottom: none;
+}
+
+.studentNav, a:hover{
+  color: #757575;
+  text-decoration: none;
 }

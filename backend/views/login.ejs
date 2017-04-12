@@ -6,14 +6,14 @@
                 // Construct an instance of Auth0Lock with your clientId and aut0 domain name
                 var options = {
                     theme: {
-                        logo: 'http://vignette2.wikia.nocookie.net/steven-universe/images/8/8a/Sanic_by_lazyturtle-d5h8ww3.png',
+                        logo: '/images/hc_logo.svg',
                         primaryColor: '#8AD9BB',
                         foregroundColor: "#000000"
                     },
                     closable: false,
                     languageDictionary: {
                         emailInputPlaceholder: "nurse@email.com",
-                        title: "Health Connect"
+                        title: ""
                     },
                     auth: {
                         redirectUrl: '<%= env.AUTH0_CALLBACK_URL %>',

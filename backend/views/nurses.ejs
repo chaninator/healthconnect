@@ -1,0 +1,33 @@
+<% include partials/header %>
+<section>
+<div class="opac">
+  <div class="container">
+    <div class="row">
+      <div class="nav col-md-4">
+        <nav>
+          <ul>
+            <a href="user" class="nurseNav">Home</a>
+            <a href="#" class="nurseNav">Student Profile</a>
+            <a href="#" class="nurseNav">Create New Report</a>
+            <a href="#" class="nurseNavBottom">Additional Option</a>
+          </ul>
+        </nav>
+      </div>
+      <div class="content-container col-md-8">
+        <form id="search">
+          <input type="search" id="search-keyword">
+          <input type="submit" value="Search">
+        </form>
+        <ul id="funny">
+          <p>Students</p>
+          <% for (var i=0, x=students.length; i<x; i++) { %>
+            <li><a href="/studentProfile/<%= students[i]._id%>"><p><%= students[i].name %></p></a></li>
+          <% } %>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<% include partials/footer %>

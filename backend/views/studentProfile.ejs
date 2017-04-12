@@ -1,0 +1,40 @@
+<% include partials/header %>
+<section>
+<div class="opac">
+<div class="container">
+  <div class="row">
+    <div class="nav col-md-4">
+      <nav>
+        <ul>
+          <a href="#" class="studentNav">Home</a>
+          <a href="/" class="studentNav">Student Profile</a>
+          <a href="#" class="studentNav">Create New Report</a>
+        </ul>
+      </nav>
+    </div>
+<div class="content-container col-md-5">
+  <p><img src="<%=image%>"/></p>
+  <p><%= name %></p>
+  <p><%= birthdate %></p>
+  <p><%= guardian %></p>
+  <p><%= guardian_number %></p>
+  <p><%= guardian_email %></p>
+  <p><%= medicalHistory %></p>
+  <p><%= allergies %></p>
+  <p><%= immunizations %></p>
+  <h3>Reports</h3>
+  <% for (var i=0, x=reports.length; i<x; i++) { %>
+    <p class="report top"><%= reports[i].date %></p>
+    <p class="report"><%= reports[i].vitals %></p>
+    <p class="report"><%= reports[i].symptoms %></p>
+    <p class="report"><%= reports[i].call_notes %></p>
+    <p class="report bottom"><%= reports[i].treatment_plan %></p>
+  <% } %>
+  <p><a id="generate-report" href="/createreport/<%=id%>">Create New Report</a></p>
+  </div>
+</div>
+</div>
+</div>
+</section>
+
+<% include partials/footer %>
