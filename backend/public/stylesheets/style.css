@@ -67,14 +67,13 @@ section {
 }
 
 .opac {
-  height: 75%;
-  margin: 0 93px 0 93px;
-  background-color: #ffffff;
-  opacity: 0.7;
+  height: 80%;
+  margin: 100px 93px 0 93px;
+  background: rgba(255, 255, 255, .7);
   border-radius: 0 0 20px 20px;
   text-align: center;
-  padding-top: 50px;
-  z-index: -1;
+  padding-top: 150px;
+  overflow: auto;
 }
 
 footer {
@@ -99,7 +98,7 @@ div img {
 }
 
 a {
-  color: #00B7FF;
+  color: #757575;
 }
 
 h4 {
@@ -197,10 +196,12 @@ li {
 .btn-signup, .btn-search {
   color: #FFFFFF;
   background-color: #F88E79;
+  border: 2px solid #F88E79;
 }
 
 .btn-login {
   color: #8AD9BB;
+  border: 2px solid #8AD9BB;
 }
 
 .btn-search{
@@ -211,7 +212,6 @@ li {
   font-size: 18px;
   margin: 15px;
   padding: 10px 25px;
-  border: 2px solid;
   border-radius: 50px;
 }
 
@@ -255,8 +255,8 @@ li {
   text-align: left;
   font-size: 26px;
   border-bottom: solid 2px #8AD9BB;
-  color: black;
-  padding: 10px 0 10px 18px;
+  color: #757575;
+  padding: 10px 0 10px 25px;
 }
 
 .nurseNavBottom, .studentNavBottom{
@@ -271,12 +271,11 @@ li {
   text-decoration: none;
 }
 
-.funny{
+.funny, .coolKids{
   display: block;
   text-align: center;
   font-size: 20px;
-  border-bottom: solid 2px #8AD9BB;
-  color: black;
+  color: #757575;
   padding: 10px 0 10px 18px;
 }
 
@@ -284,4 +283,15 @@ li {
   text-align: right;
   display: block;
   margin-left: 10px;
+}
+
+.borderLine{
+  border-bottom: solid 2px #8AD9BB;
+}
+
+.navHover:hover{
+  background-color: #8AD9BB;
+  padding-left: 10px;
+  color: #757575;
+  border-radius: 15px 50px 50px 15px;
 }

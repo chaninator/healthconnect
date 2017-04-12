@@ -6,7 +6,7 @@
       <div class="nav col-md-4">
         <nav>
           <ul>
-            <a href="user" class="nurseNav">Home</a>
+            <div class="nurseNav"><a href="user"><div class="navHover">Home</div></a></div>
             <a href="#" class="nurseNav">Student Profile</a>
             <a href="#" class="nurseNav">Create New Report</a>
             <a href="#" class="nurseNav nurseNavBottom">Additional Option</a>
@@ -21,8 +21,9 @@
         <br></br>
         <ul class="funny">
           <p class="studentList">Students</p>
+          <div class="borderLine"></div>
           <% for (var i=0, x=students.length; i<x; i++) { %>
-            <a href="/studentProfile/<%= students[i]._id%>"><p><%= students[i].name %></p></a>
+            <a href="/studentProfile/<%= students[i]._id%>" class="coolKids"><p><%= students[i].name %></p></a>
           <% } %>
         </ul>
       </div>
