@@ -6,29 +6,29 @@
     <div class="nav col-md-4">
       <nav>
         <ul>
-          <a href="#" class="studentNav">Home</a>
-          <a href="/" class="studentNav">Student Profile</a>
-          <a href="#" class="studentNav">Create New Report</a>
+          <div class="studentNav"><a href="#"><div class="navHover">Home</div></a></div>
+          <div class="studentNav"><a href="/"><div class="navHover">Student Profile</div></a></div>
+          <div class="studentNav studentNavBottom"><a href="#"><div class="navHover">Create New Report</div></a></div>
         </ul>
       </nav>
     </div>
 <div class="content-container col-md-5">
   <p><img src="<%=image%>"/></p>
-  <p><%= name %></p>
-  <p><%= birthdate %></p>
-  <p><%= guardian %></p>
-  <p><%= guardian_number %></p>
-  <p><%= guardian_email %></p>
-  <p><%= medicalHistory %></p>
-  <p><%= allergies %></p>
-  <p><%= immunizations %></p>
+  <p>Name: <%= name %></p>
+  <p>DOB: <%= birthdate %></p>
+  <p>Guardian: <%= guardian %></p>
+  <p>Guardian Number: <%= guardian_number %></p>
+  <p>Guardian Email: <%= guardian_email %></p>
+  <p>Medical History: <%= medicalHistory %></p>
+  <p>Allergies: <%= allergies %></p>
+  <p>Immunizations: <%= immunizations %></p>
   <h3>Reports</h3>
   <% for (var i=0, x=reports.length; i<x; i++) { %>
-    <p class="report top"><%= reports[i].date %></p>
-    <p class="report"><%= reports[i].vitals %></p>
-    <p class="report"><%= reports[i].symptoms %></p>
-    <p class="report"><%= reports[i].call_notes %></p>
-    <p class="report bottom"><%= reports[i].treatment_plan %></p>
+    <p class="report top">Date: <%= reports[i].date %></p>
+    <p class="report">Vitals: <%= reports[i].vitals %></p>
+    <p class="report">Symptoms: <%= reports[i].symptoms %></p>
+    <p class="report">Notes: <%= reports[i].call_notes %></p>
+    <p class="report bottom">Treatment Plan: <%= reports[i].treatment_plan %></p>
   <% } %>
   <p><a id="generate-report" href="/createreport/<%=id%>">Create New Report</a></p>
   </div>

@@ -1,5 +1,6 @@
 var express = require('express');
 var passport = require('passport');
+var ensureLoggedIn = require('connect-ensure-login').ensureLoggedIn();
 var router = express.Router();
 var Student = require('../models/student');
 
@@ -60,6 +61,7 @@ router.get('/createreport/:id', function(req, res, next) {
   })
 })
 
+
 router.post('/createreport', function(req, res, next) {
   var userId = req.user.identities[0].user_id;
   var email = req.user._json.email;
@@ -93,6 +95,23 @@ router.post('/createreport', function(req, res, next) {
 
 router.get('/guardian', function(req, res, next) {
   res.render('guardian');
+
+router.get('/guardian', ensureLoggedIn, function(req, res, next) {
+  console.log(req.user.displayName);
+  Student.findOne({ guardian_email: req.user.displayName }, function(err, student) {
+  res.render('guardian', {
+    image: student.image,
+    name: student.name,
+    birthdate: student.dob,
+    guardian: student.guardian_name,
+    guardian_number: student.guardian_number,
+    guardian_email: student.guardian_email,
+    medicalHistory: student.medications,
+    allergies: student.allergies,
+    immunizations: student.immunizations,
+    reports: student.report
+    });
+  });
 });
 
 router.get('/doctor', function(req, res, next) {
@@ -128,9 +147,6 @@ router.get('/nurse', function(req, res, next) {
   res.render('nurse');
 });
 
-router.get('/guardian', function(req, res, next) {
-  res.render('guardian');
-});
 
 router.get('/doctor', function(req, res, next) {
   res.render('doctor');
@@ -150,7 +166,7 @@ router.get('/callback',
   passport.authenticate('auth0', { failureRedirect: '/url-if-something-fails' }),
   function(req, res) {
     // res.json(res);
-    res.redirect(req.session.returnTo || '/user');
+    res.redirect('/user');
     console.log('req4: ', req);
     console.log('res4: ', res);
   });
