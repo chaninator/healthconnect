@@ -69,11 +69,10 @@ footer {
 
 div img {
   margin: 10px;
-<<<<<<< HEAD
-=======
+}
+
 a {
   color: #00B7FF;
->>>>>>> doctor started
 }
 
 h4 {
@@ -154,6 +153,18 @@ h4 {
 .modal-content {
   max-height: calc(100vh - 210px);
   overflow-y: auto;
-=======
->>>>>>> added styles
+}
+
+.studentNav{
+  display: block;
+  text-align: left;
+  font-size: 26px;
+  border-bottom: solid 2px #8AD9BB;
+  color: black;
+  padding-bottom: 4px;
+}
+
+.studentNav, a:hover{
+  color: #757575;
+  text-decoration: none;
 }
