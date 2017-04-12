@@ -1,16 +1,20 @@
 var mongoose = require('mongoose');
 ObjectId = mongoose.Schema.ObjectId;
 
+// var date = dateFunction(){
+// return Date.now();
+// }
+
 var reportSchema = new mongoose.Schema({
-  date: { type: String, required: true },
+  date: { type: String },
   vitals: { type: String, required: true },
   symptoms: { type: String, required: true },
-  call_notes: { type: String, required: true },
-  treatment_plan: { type: String, required: true }
+  notes: { type: String, required: true },
+  // treatment_plan: { type: String, required: true }
 });
 
 
-var schema = new mongoose.Schema({
+var studentSchema = new mongoose.Schema({
   image: String,
   name: { type: String, required: true},
   dob: { type: String, required: true},
@@ -25,6 +29,6 @@ var schema = new mongoose.Schema({
 });
 
 
-var Student = mongoose.model('Student', schema);
+var Student = mongoose.model('Student', studentSchema);
 var Report = mongoose.model('Report', reportSchema);
 module.exports = Student;

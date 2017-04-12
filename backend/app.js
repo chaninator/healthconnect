@@ -84,6 +84,10 @@ app.use('/reports', reports);
 app.use('/doctors', doctors);
 
 
+//------->>>>>>> something like this that e may need inorder to save data from form<<<<--------
+// app.get("/edit", permissions.requireActiveRole, edituserprofile.editMyProfile);
+//
+// app.patch("/createreport/:studentid", permissions.requireActiveRole, edituserprofile.saveChanges);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
