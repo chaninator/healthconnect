@@ -155,7 +155,7 @@ h4 {
   overflow-y: auto;
 }
 
-.studentNav{
+.studentNav, .nurseNav{
   display: block;
   text-align: left;
   font-size: 26px;
