@@ -83,6 +83,7 @@ footer {
   justify-content: center;
   flex-direction: row;
   text-align: center;
+  margin-top: 200px;
 }
 
 div img {
