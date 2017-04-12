@@ -155,13 +155,21 @@ h4 {
   overflow-y: auto;
 }
 
-.studentNav, .nurseNav{
+ul{
+  list-style-type: none;
+}
+
+.studentNav, .nurseNav, .nurseNavBottom{
   display: block;
   text-align: left;
   font-size: 26px;
   border-bottom: solid 2px #8AD9BB;
   color: black;
   padding-bottom: 4px;
+}
+
+.nurseNavBottom, .studentNavBottom{
+  border-bottom: none;
 }
 
 .studentNav, a:hover{
