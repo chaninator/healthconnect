@@ -48,18 +48,19 @@ router.get('/studentProfile/:id', function(req, res, next) {
       id: student._id
     })
   })
-})
+});
 
 router.get('/createreport/:id', function(req, res, next) {
   console.log(req.user);
   Student.findById(req.params.id, function(err, student) {
+    console.log('I am the req.params.id, ', req.params.id);
     if (err) { console.log('err: ', err) }
     res.render('createreport', {
       name: student.name,
       image: student.image
     })
   })
-})
+});
 
 
 router.post('/createreport', function(req, res, next) {
@@ -91,10 +92,11 @@ router.post('/createreport', function(req, res, next) {
       res.json(student);
     });
   });
-})
+});
 
 router.get('/guardian', function(req, res, next) {
   res.render('guardian');
+});
 
 router.get('/guardian', ensureLoggedIn, function(req, res, next) {
   console.log(req.user.displayName);
