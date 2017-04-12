@@ -21,12 +21,7 @@ router.get('/nurses', function(req, res, next) {
     if (err) { console.log('Database err: ', err) }
 
     res.render('nurses', {
-      student0: students[0].name,
-      student0id: students[0]._id,
-      student1: students[1].name,
-      student1id: students[1]._id,
-      student2: students[2].name,
-      student2id: students[2]._id
+      students: students
     })
   })
 });
