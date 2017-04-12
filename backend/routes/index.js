@@ -1,5 +1,6 @@
 var express = require('express');
 var passport = require('passport');
+var ensureLoggedIn = require('connect-ensure-login').ensureLoggedIn();
 var router = express.Router();
 var Student = require('../models/student');
 
@@ -57,8 +58,23 @@ router.get('/createreport/:id', function(req, res, next) {
   })
 })
 
-router.get('/guardian', function(req, res, next) {
-  res.render('guardian');
+router.get('/guardian', ensureLoggedIn, function(req, res, next) {
+  //var email = req.user.displayName;
+  Student.find({guardian_email: req.user.displayName}, function(err, student) {
+    res.render('guardian', {
+      image: student.image,
+      name: student.name,
+      birthdate: student.dob,
+      guardian: student.guardian_name,
+      guardian_number: student.guardian_number,
+      guardian_email: student.guardian_email,
+      medicalHistory: student.medications,
+      allergies: student.allergies,
+      immunizations: student.immunizations,
+      reports: student.report,
+      id: student._id
+    });
+  });
 });
 
 router.get('/doctor', function(req, res, next) {
