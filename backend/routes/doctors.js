@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> doctor started
 var express = require('express');
 var router = express.Router();
 

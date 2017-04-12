@@ -13,7 +13,7 @@ var env = {
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Health Connect', env: env });
+  res.redirect('/login');
 });
 
 router.get('/nurses', function(req, res, next) {
@@ -88,9 +88,7 @@ router.get('/callback',
     console.log('res4: ', res);
   });
 
-=======
-=======
->>>>>>> added index.js
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Health Connect', env: env });
@@ -100,9 +98,6 @@ router.get('/nurse', function(req, res, next) {
   res.render('nurse');
 });
 
-<<<<<<< HEAD
->>>>>>> doctor started
-=======
 router.get('/guardian', function(req, res, next) {
   res.render('guardian');
 });
@@ -130,5 +125,4 @@ router.get('/callback',
     console.log('res4: ', res);
   });
 
->>>>>>> added index.js
 module.exports = router;
