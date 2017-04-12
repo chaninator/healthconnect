@@ -42,8 +42,7 @@ body {
 }
 
 section {
-  height: 100vh;
-  min-height: 800px;
+  height: 700px;
   background-image: url(../images/kiwi.svg);
   background-size: cover;
 }
@@ -88,6 +87,17 @@ footer {
 
 div img {
   margin: 10px;
+}
+
+a {
+  color: #00B7FF;
+}
+
+h4 {
+  font-size: 145%;
+  display: inline;
+  font-weight: bold;
+  color: #8AD9BB
 }
 
 .modal-desc {
@@ -153,11 +163,17 @@ div img {
   width: 1000px;
 }
 
+.studentInfo {
+  font-size: 16px;
+  text-decoration: none;
+}
+
 .modal-content {
   max-height: calc(100vh - 210px);
   overflow-y: auto;
 }
 
+<<<<<<< HEAD
 .guardian-nav li {
   list-style: none;
   text-align: left;
@@ -215,4 +231,18 @@ li {
   display: table;
   margin: 0 auto;
   padding-top: 30px;
+}
+
+.studentNav{
+  display: block;
+  text-align: left;
+  font-size: 26px;
+  border-bottom: solid 2px #8AD9BB;
+  color: black;
+  padding-bottom: 4px;
+}
+
+.studentNav, a:hover{
+  color: #757575;
+  text-decoration: none;
 }

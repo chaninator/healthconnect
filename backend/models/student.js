@@ -1,5 +1,5 @@
 var mongoose = require('mongoose');
-ObjectId = mongoose.Schema.ObjectId;
+var ObjectId = mongoose.Schema.ObjectId;
 
 var reportSchema = new mongoose.Schema({
   date: { type: String, required: true },

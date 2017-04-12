@@ -1,26 +1,32 @@
 <% include partials/header %>
 <section>
 <div class="opac">
-<div class="nav col-md-5">
-  <nav>
-    <a href="#">Home</a>
-    <a href="/">Student Profile</a>
-    <a href="#">Create New Report</a>
-  </nav>
-</div>
-<div class="content-container col-md-5">
-  <p><img src="<%=image%>"/></p>
-  <p><%= name %></p>
-  <p><%= birthdate %></p>
-  <p><%= guardian %></p>
-  <p><%= guardian_number %></p>
-  <p><%= guardian_email %></p>
-  <p><%= medicalHistory %></p>
-  <p><%= allergies %></p>
-  <p><%= immunizations %></p>
-  <p><%= reports %></p>
-  <p><a id="generate-report" href="/createreport/<%=id%>">Create New Report</a></p>
-  </div>
+<div class="container">
+  <div class="row">
+    <div class="nav col-md-4">
+      <nav>
+        <ul>
+          <a href="#" class="studentNav">Home</a>
+          <a href="/" class="studentNav">Student Profile</a>
+          <a href="#" class="studentNav">Create New Report</a>
+        </ul>
+      </nav>
+    </div>
+    <div class="content-container col-md-8 studentInfo">
+      <p><img src="<%=image%>"/></p>
+      <p><%= name %></p>
+      <p><%= birthdate %></p>
+      <p><%= guardian %></p>
+      <p><%= guardian_number %></p>
+      <p><%= guardian_email %></p>
+      <p><%= medicalHistory %></p>
+      <p><%= allergies %></p>
+      <p><%= immunizations %></p>
+      <p><%= reports %></p>
+      <p><a id="generate-report" href="/createreport/<%=id%>">Create New Report</a></p>
+      </div>
+      </div>
+    </div>
   </div>
   </section>
 
