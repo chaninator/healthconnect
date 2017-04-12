@@ -170,7 +170,8 @@ li {
 }
 
 .btn-signup {
-  color: #F88E79;
+  color: #FFFFFF;
+  background-color: #F88E79;
 }
 
 .btn-login {
@@ -197,8 +198,8 @@ li {
 }
 
 .btn-signup:hover {
-  background-color: #F88E79;
-  color: white;
+  background-color: #FFFFFF;
+  color: #F88E79;
   border: 2px solid;
   border-color: #F88E79
 }
