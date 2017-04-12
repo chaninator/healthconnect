@@ -18,7 +18,14 @@
   <p><%= medicalHistory %></p>
   <p><%= allergies %></p>
   <p><%= immunizations %></p>
-  <p><%= reports %></p>
+  <h3>Reports</h3>
+  <% for (var i=0, x=reports.length; i<x; i++) { %>
+    <p class="report top"><%= reports[i].date %></p>
+    <p class="report"><%= reports[i].vitals %></p>
+    <p class="report"><%= reports[i].symptoms %></p>
+    <p class="report"><%= reports[i].call_notes %></p>
+    <p class="report bottom"><%= reports[i].treatment_plan %></p>
+  <% } %>
   <p><a id="generate-report" href="/createreport/<%=id%>">Create New Report</a></p>
   </div>
   </div>
