@@ -69,9 +69,11 @@ app.use('/doctors', doctors);
 
 app.use('/students', students);
 
+
 app.use('/nurses', nurses);
 app.use('/reports', reports);
 app.use('/doctors', doctors);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

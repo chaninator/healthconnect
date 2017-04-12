@@ -13,7 +13,12 @@ $(document).ready(function() {
     console.log('date: ', date);
     /* Act on the event */
     if (!date) {
+
       alert('Please make sure to fill out text');
+
+      // alert('Please make sure to fill out text');
+      sweetAlert("Oops...", "Please fill out form!", "error");
+
     } else {
       $('#modal-report2').modal('hide');
       $('#modal-report3').modal('show');
@@ -47,6 +52,7 @@ $(document).ready(function() {
     e.preventDefault();
     var notes = $('#notes-textarea').val();
     console.log('notes: ', notes);
+
     /* Act on the event */
     if (!notes) {
       alert('Please make sure to fill out text');
