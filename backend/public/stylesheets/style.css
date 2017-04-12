@@ -1,15 +1,23 @@
 html, body {
   height: 100%;
   margin: 0;
+  min-width: 75%;
 }
 
 body {
   font-family: 'Arial Rounded MT Bold', sans-serif;
 }
 
+.hc-logo {
+  border
+  z-index: 2;
+}
+
 #main-header {
   padding: 0;
   border-bottom: 2px #F88E79 solid;
+  height: 120px;
+  margin-bottom: 25px;
 }
 
 .col-md-4, .col-md-6 {
@@ -20,7 +28,7 @@ body {
 }
 
 .right {
-  margin-top: 73px;
+  margin-top: 40px;
   padding-right: 5px;
   margin-right: 88px;
 }
@@ -29,6 +37,8 @@ body {
   text-align: left;
   padding-left: 5px;
   margin-left: 88px;
+  display: flex;
+  align-items: center;
 }
 
 section {
@@ -38,18 +48,25 @@ section {
   background-size: cover;
 }
 
+.slogan{
+  color: #8AD9BB;
+  font-size: 18px;
+  padding-top: 30px;
+}
+
 .kiwi {
   background-size: cover;
 }
 
 .opac {
-  height: 520px;
+  height: 75%;
   margin: 0 93px 0 93px;
   background-color: #ffffff;
   opacity: 0.7;
-  border-radius: 0 0 10px 10px;
+  border-radius: 0 0 20px 20px;
   text-align: center;
   padding-top: 50px;
+  z-index: -1;
 }
 
 footer {
@@ -150,5 +167,50 @@ div img {
 
 li {
   list-style: none;
-  
+}
+
+.btn-signup {
+  color: #F88E79;
+}
+
+.btn-login {
+  color: #8AD9BB;
+}
+
+.btn-signup, .btn-login {
+  font-size: 18px;
+  margin: 15px;
+  padding: 10px 25px;
+  border: 2px solid;
+  border-radius: 50px;
+}
+
+.btn-signup:hover, .btn-login:hover {
+  text-decoration: none;
+}
+
+.btn-login:hover {
+  background-color: #8AD9BB;
+  color: white;
+  border: 2px solid;
+  border-color: #8AD9BB
+}
+
+.btn-signup:hover {
+  background-color: #F88E79;
+  color: white;
+  border: 2px solid;
+  border-color: #F88E79
+}
+
+.welcome-text {
+  font-size: 35px;
+  padding-bottom: 15px;
+}
+
+.welcome-container {
+  width: 50%;
+  display: table;
+  margin: 0 auto;
+  padding-top: 30px;
 }
