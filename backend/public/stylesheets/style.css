@@ -232,8 +232,7 @@ li {
   padding-top: 30px;
 }
 
-.studentNav{
-ul{
+.studentNav, ul{
   list-style-type: none;
 }
 
