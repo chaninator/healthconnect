@@ -1,45 +1,80 @@
 <% include partials/header %>
-<section>
-<div class="opac">
-  <div class="container">
-    <div class="row">
-      <div class="nav col-md-4">
-        <div class="optionsBox">
-          <nav>
-            <ul class="nav nav-pills nav-stacked left-menu" id="stacked-menu">
-              <div class="guardNav"><a href="#"><div class="navHover">Home</div></a></div>
-              <a href="#" data-target="#item1" data-toggle="collapse" data-parent="#stacked-menu" class="guardNav" id="guardDrop"><div class="navHover">Student Profile<span class="caret arrow"></span></div></a>
-                <ul class="nav nav-stacked collapse left-submenu" id="item1">
-                  <li class="subNav"><a href="#"/><div class="navHover">Overview</div></a></li>
-                  <li class="subNav"><a href="#"/><div class="navHover">Medical History</div></a></li>
-                  <li class="subNav"><a href="#"/><div class="navHover">Create New Report</div></a></li>
-                </ul>
-              <div class="nurseNav nurseNavBottom"><a href="#"><div class="navHover">Add New Student</div></a></div>
-            </ul>
-          </nav>
+    <section>
+        <div class="opac">
+            <div class="container">
+                <div class="row">
+                    <div class="nav col-md-4">
+                        <div class="optionsBox">
+                            <nav>
+                                <ul class="nav nav-pills nav-stacked left-menu" id="stacked-menu">
+                                    <div class="guardNav">
+                                        <a href="#">
+                                            <div class="navHover">Home</div>
+                                        </a>
+                                    </div>
+                                    <a href="#" data-target="#item1" data-toggle="collapse" data-parent="#stacked-menu" class="guardNav" id="guardDrop">
+                                        <div class="navHover">Student Profile<span class="caret arrow"></span></div>
+                                    </a>
+                                    <ul class="nav nav-stacked collapse left-submenu" id="item1">
+                                        <li class="subNav"><a href="#" />
+                                            <div class="navHover">Overview</div>
+                                            </a>
+                                        </li>
+                                        <li class="subNav"><a href="#" />
+                                            <div class="navHover">Medical History</div>
+                                            </a>
+                                        </li>
+                                        <li class="subNav"><a href="#" />
+                                            <div class="navHover">Create New Report</div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <div class="guardNav">
+                                        <a href="#">
+                                            <div class="navHover">Add New Student</div>
+                                        </a>
+                                    </div>
+                                    <div class="guardNav">
+                                        <a href="#">
+                                            <div class="navHover">Messages</div>
+                                        </a>
+                                    </div>
+                                    <div class="nurseNav nurseNavBottom">
+                                        <a href="#">
+                                            <div class="navHover">Profile</div>
+                                        </a>
+                                    </div>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="searchBar">
+                            <form id="search">
+                                <input type="text" class="search-keyword" placeholder="Search">
+                                <a href="#" class="btn-search">Search</a>
+                            </form>
+                        </div>
+                        <br></br>
+                        <div class="box">
+                            <ul class="funny">
+                                <h3 class="studentList">Students</h3>
+                                <div class="borderLine"></div>
+                                <% for (var i=0, x=students.length; i<x; i++) { %>
+                                    <a href="/studentProfile/<%= students[i]._id%>" class="coolKids">
+                                        <p>
+                                            <div class="kidsHover">
+                                                <%= students[i].name %>
+                                            </div>
+                                        </p>
+                                    </a>
+                                    <% } %>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="col-md-8">
-      <div class="searchBar">
-        <form id="search">
-          <input type="search" id="search-keyword">
-          <a href="#" class="btn-search">Search</a>
-        </form>
-      </div>
-        <br></br>
-          <div class="box">
-            <ul class="funny">
-              <p class="studentList">Students</p>
-              <div class="borderLine"></div>
-              <% for (var i=0, x=students.length; i<x; i++) { %>
-                <a href="/studentProfile/<%= students[i]._id%>" class="coolKids"><p><%= students[i].name %></p></a>
-              <% } %>
-            </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-</section>
+    </section>
 
-<% include partials/footer %>
+    <% include partials/footer %>
