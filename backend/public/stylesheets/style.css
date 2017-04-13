@@ -13,6 +13,25 @@ header {
   background-color: white;
 }
 
+section {
+  height: 91vh;
+  background-image: url(../images/kiwi.svg);
+  background-size: cover;
+  margin: 0 auto;
+  overflow: auto;
+  padding: 80px 0;
+}
+
+footer {
+  height: 100px;
+  background-color: #B1748F;
+  color: #FFFFFF;
+}
+
+footer h4 {
+  color: #FFFFFF;
+}
+
 .hc-logo {
   border z-index: 2;
 }
@@ -27,6 +46,7 @@ header {
 }
 
 /*Andrew test code*/
+
 #header_container {
   left: 0;
   position: fixed;
@@ -40,14 +60,20 @@ header {
   text-align: center;
   z-index: 5;
 }
+
+
 /*end andrew test code*/
 
-#search{
+#search {
   float: right;
   padding-bottom: 30px;
 }
 
-.funny{
+.landing-container {
+  overflow: auto;
+}
+
+.funny {
   padding-top: 30px;
 }
 
@@ -70,15 +96,6 @@ header {
   margin-left: 88px;
   display: flex;
   align-items: center;
-}
-
-section {
-  height: 100vh;
-  background-image: url(../images/kiwi.svg);
-  background-size: cover;
-  margin: 0 auto;
-  overflow: auto;
-  padding: 80px 0;
 }
 
 #landing {
@@ -110,11 +127,6 @@ section {
   overflow: auto;
 }
 
-footer {
-  height: 75px;
-  background-color: #B1748F;
-}
-
 .back-pic {
   background: cover;
 }
@@ -141,7 +153,7 @@ h4 {
   font-size: 145%;
   display: inline;
   font-weight: bold;
-  color: #8AD9BB
+  color: #8AD9BB;
 }
 
 .modal-desc {
@@ -263,7 +275,7 @@ a.btn-login{
   border: 2px solid #8AD9BB;
 }
 
-.btn-search{
+.btn-search {
   z-index: -1;
 }
 
@@ -292,10 +304,10 @@ a.btn-login{
   border-color: #F88E79;
 }
 
-
 .welcome-text {
-  font-size: 35px;
+  font-size: 28px;
   padding-bottom: 15px;
+  color: #757575;
 }
 
 .welcome-container {
@@ -309,6 +321,7 @@ a.btn-login{
   list-style-type: none;
 }
 
+
 .nav>li>a:hover{
   text-decoration: none;
   background-color: inherit;
@@ -317,26 +330,26 @@ a.btn-login{
 .nurseNav, .studentNav, .guardNav, .subNav{
   display: block;
   text-align: left;
-  font-size: 26px;
+  font-size: 22px;
   border-bottom: solid 2px #8AD9BB;
   color: #757575;
   padding: 10px 0 10px 25px;
 }
 
-.nurseNavBottom, .studentNavBottom, .guarNavBottom, .subNavBottom{
+.nurseNavBottom, .studentNavBottom, .guarNavBottom, .subNavBottom {
   color: black;
   display: block;
   text-align: left;
-  font-size: 26px;
+  font-size: 22px;
   border-bottom: none;
 }
 
-.studentNav, a:hover{
+.studentNav, a:hover {
   text-decoration: none;
   /*background-color: #8AD9BB;*/
 }
 
-.funny, .coolKids{
+.funny, .coolKids {
   display: block;
   text-align: center;
   font-size: 20px;
@@ -350,11 +363,11 @@ a.btn-login{
   margin-left: 10px;
 }
 
-.borderLine{
+.borderLine {
   border-bottom: solid 3px #8AD9BB;
 }
 
-.navHover:hover{
+.navHover:hover {
   background-color: #8AD9BB;
   padding-left: 10px;
   color: #757575;
@@ -365,9 +378,7 @@ a.btn-login{
   text-decoration: none;
 }
 
-
 .text-box-one, .text-box-two {
-
   background-color: #F88E79;
   height: 100px;
   color: white;
@@ -381,6 +392,7 @@ a.btn-login{
   height: 500px;
   color: #757575;
   font-size: 18px;
+  overflow: auto;
 }
 
 .snippet-titles {
@@ -413,4 +425,72 @@ a.btn-login{
 .optionsBox{
   position: static;
 
+.footer-top {
+  text-align: right;
+  border-bottom: 1px solid #F88E79;
+}
+
+.footer-name-slogan {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding-top: 10px;
+  margin-right: 20px;
+}
+
+.footer-nav {
+  text-align: left;
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+}
+
+.footer-nav li {
+  padding: 10px 30px;
+}
+
+.footer-nav a{
+  color: white;
+}
+
+li.co-name{
+  font-size: 20px;
+  padding-right: 15px;
+}
+
+.student-name {
+  font-size: 26px;
+  border-bottom: 1px solid #8AD9BB;
+  margin: 10px 0 10px 10px;
+  padding: 10px;
+}
+
+.student-report-title {
+  font-size: 26px;
+  border-bottom: 1px solid #8AD9BB;
+  border-top: 1px solid #8AD9BB;
+  margin: 10px 0 10px 10px;
+  padding: 10px;
+}
+
+.content-container {
+  text-align: left;
+}
+
+.student-image img {
+  max-height: 200px;
+}
+
+.guardian-info {
+  font-size: 18px;
+}
+
+.student-guardian-info, .student-report-info {
+  background: rgba(138,217,187,.2);
+  /*border-bottom: 1px solid #8AD9BB;*/
+  margin: 10px 0 10px 10px;
+  padding: 10px;
+  color: #757575;
+  font-size: 15px;
 }
