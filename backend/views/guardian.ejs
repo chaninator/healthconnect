@@ -3,15 +3,18 @@
       <div class="opac">
       <div class="container">
         <div class="row">
-          <div class="nav col-md-4">
-            <nav>
+            <nav class="nav col-md-4">
               <ul>
                 <div class="guardNav"><a href="#"><div class="navHover">Home</div></a></div>
-                <div class="guardNav"><a href="#"><div class="navHover">Student Profile</div></a></div>
-                <div class="guardNav"><a href="#"><div class="navHover">Create New Report</div></a></div>
+                <div class="guardNav" id="guardDrop"><a href="#"><div class="navHover">Student Profile</div></a></div>
+                  <ul class="dropMenu">
+                    <div class="subNav"><a href="#"><div class="navHover">One</div></a></div>
+                    <div class="subNav"><a href="#"><div class="navHover">Two</div></a></div>
+                    <div class="subNav subNavBottom"><a href="#"><div class="navHover">Three</div></a></div>
+                  </ul>
+                <div class="guardNav guardNavBottom"><a href="#"><div class="navHover">Create New Report</div></a></div>
               </ul>
             </nav>
-          </div>
       <div class="content-container col-md-5">
       <p><img src="<%=image%>"/></p>
       <p class="guardian-profile">Name: <%= name %></p>

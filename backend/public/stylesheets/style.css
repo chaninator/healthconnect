@@ -276,7 +276,7 @@ li {
 }
 
 
-.nurseNav, .studentNav, .guardNav{
+.nurseNav, .studentNav, .guardNav, .subNav{
   display: block;
   text-align: left;
   font-size: 26px;
@@ -285,7 +285,7 @@ li {
   padding: 10px 0 10px 25px;
 }
 
-.nurseNavBottom, .studentNavBottom{
+.nurseNavBottom, .studentNavBottom, .guarNavBottom, .subNavBottom{
   color: black;
   display: block;
   text-align: left;
@@ -325,6 +325,20 @@ li {
 .studentNav, a:hover {
   text-decoration: none;
 }
+
+/*.guardNav a ul{
+  display: none;
+  margin-left: 150px;
+  margin-top: -50px;
+  float:left;
+  height: 0;
+}
+
+.guardNav a:hover ul{
+  display: block;
+  z-index: 12;
+  padding-left: 1px;
+}*/
 
 .text-box-one {
   background-color: #F88E79;
