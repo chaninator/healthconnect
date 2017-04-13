@@ -405,8 +405,12 @@ a.btn-login{
 .box {
   display: inline-block;
   width: 500px;
-  margin-left: 50px;
-  margin-top: 10px;
-  padding: 5px;
-  border: 2px solid #8AD9BB;
+  margin: 0 10px 20px 50px;
+  padding: 10px 15px 0 15px;
+  border: 3px solid #8AD9BB;
+}
+
+.optionsBox{
+  position: static;
+
 }
