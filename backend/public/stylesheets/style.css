@@ -131,9 +131,6 @@ div img {
   margin: 10px;
 }
 
-a {
-  color: #757575;
-}
 
 a:link, a:visited{
   text-decoration: none;
@@ -236,6 +233,14 @@ li {
   color: #FFFFFF;
   background-color: #F88E79;
   border: 2px solid #F88E79;
+}
+
+a.btn-signup{
+  color: #FFFFFF;
+}
+
+a.btn-login{
+  color: #8AD9BB;
 }
 
 .btn-login {
@@ -345,19 +350,6 @@ li {
   text-decoration: none;
 }
 
-/*.guardNav a ul{
-  display: none;
-  margin-left: 150px;
-  margin-top: -50px;
-  float:left;
-  height: 0;
-}
-
-.guardNav a:hover ul{
-  display: block;
-  z-index: 12;
-  padding-left: 1px;
-}*/
 
 .text-box-one, .text-box-two {
 
