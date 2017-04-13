@@ -4,15 +4,10 @@ var ObjectId = mongoose.Schema.ObjectId;
 
 
 var reportSchema = new mongoose.Schema({
-  date: {type: String, default: new Date()},
+  date: { type: String, default: new Date() },
   vitals: { type: String, required: true },
   symptoms: { type: String, required: true },
-
-  call_notes: { type: String, required: true },
-
-  notes: { type: String, required: true },
-  // treatment_plan: { type: String, required: true }
-
+  notes: { type: String, required: true }
 });
 
 

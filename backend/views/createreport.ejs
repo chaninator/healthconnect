@@ -174,11 +174,11 @@
 
 
 
-    <% include partials/header %>
-    <section>
+    <!-- <% include partials/header %>
+    <section> -->
         <!-- Modal for starting report -->
 
-        <div class="container">
+        <!-- <div class="container">
             <div class="modal animated slideInUp" id="modal-report">
                 <div class="vertical-alignment-helper">
                     <div class="modal-dialog modal-lg vertical-align-center">
@@ -207,44 +207,12 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <!-- Modal to enter date -->
-        <form action="/createreport" method="POST">
-            <div class="container">
-                <div class="modal animated fadeIn" id="modal-report2">
-                    <div class="vertical-alignment-helper">
-                        <div class="modal-dialog modal-lg vertical-align-center">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <a href="" class="btn btn-default" data-dismiss="modal" style="border: none;">Back</a>
-                                    <button type="button" class="close" data-dismiss="modal">CANCEL</button>
-                                </div>
-                                <div class="modal-body row">
-                                    <div class="col-md-1"></div>
-                                    <div class="col-md-2 modal-desc">
-                                        <span class="modal-text">Date</span>
-                                    </div>
-                                    <div class="col-md-1"></div>
-                                    <div class="col-md-8">
-                                        <div style="padding: 10px; font-size: 25px">
-                                            <%= name %>
-                                        </div>
-                                        <textarea autofocus name="date" rows="8" cols="50" placeholder="Please enter date here" id="date-textarea"></textarea>
-
-                                    </div>
-                                </div>
-                                <div class="modal-footer">
-                                    <a href="" class="btn btn-primary btn-date-next">Next</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <!-- <form action="" name="createreport" id="createreport" method="POST"> -->
             <!-- Modal to enter vitals -->
-
-            <div class="container">
-                <div class="modal animated fadeIn" id="modal-report3">
+            <!-- <div class="container">
+                <div class="modal animated fadeIn" id="modal-report2">
                     <div class="vertical-alignment-helper">
                         <div class="modal-dialog modal-lg vertical-align-center">
                             <div class="modal-content">
@@ -272,10 +240,10 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <!-- Modal to enter symptoms -->
-            <div class="container">
-                <div class="modal animated fadeIn" id="modal-report4">
+            <!-- <div class="container">
+                <div class="modal animated fadeIn" id="modal-report3">
                     <div class="vertical-alignment-helper">
                         <div class="modal-dialog modal-lg vertical-align-center">
                             <div class="modal-content">
@@ -303,10 +271,10 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <!-- Modal to enter notes -->
-            <div class="container">
-                <div class="modal animated fadeIn" id="modal-report5">
+            <!-- <div class="container">
+                <div class="modal animated fadeIn" id="modal-report4">
                     <div class="vertical-alignment-helper">
                         <div class="modal-dialog modal-lg vertical-align-center">
                             <div class="modal-content">
@@ -334,10 +302,10 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <!-- Modal to review report -->
-            <div class="container">
-                <div class="modal animated fadeIn" id="modal-report6">
+            <!-- <div class="container">
+                <div class="modal animated fadeIn" id="modal-report5">
                     <div class="vertical-alignment-helper">
                         <div class="modal-dialog modal-lg vertical-align-center">
                             <div class="modal-content">
@@ -358,12 +326,12 @@
                                         </div>
                                         <ul id="report-vitals"></ul>
                                         <ul id="report-symptoms"></ul>
-                                        <ul id="report-notes"></ul>
+                                        <ul id="report-notes"></ul> -->
                                         <!-- <h1>THIS WHERE U LOOK AT THE REPORT AND SHIT. YO THIS KID HAS LICE. DOCTOR WHAT DO WE DO. THIS KID IS GROSS AF!!!!!!</h1> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum hic ipsa ducimus eligendi sequi, ipsum maiores fuga esse, explicabo magnam nemo laboriosam harum voluptate optio perspiciatis laudantium pariatur.
                                         Repudiandae, labore. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime natus molestias magni impedit voluptas omnis vitae corrupti explicabo recusandae similique labore saepe, doloremque fugiat mollitia
                                         architecto facere consectetur nulla. Numquam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae accusamus possimus esse impedit nemo, assumenda dolore voluptas quasi in natus asperiores, recusandae
                                         ex quisquam laborum minima dolor itaque. Labore, temporibus! -->
-                                    </div>
+                                    <!-- </div>
                                 </div>
                                 <div class="modal-footer">
                                     <a href="" class="btn btn-primary btn-notes-next">Submit</a>
@@ -380,4 +348,177 @@
     </section>
 
 
-    <% include partials/footer %>
+    <% include partials/footer %> -->
+
+    <% include partials/header %>
+        <section>
+            <!-- Modal for starting report -->
+
+            <div class="container">
+                <div class="modal fade" id="modal-report">
+                    <div class="vertical-alignment-helper">
+                        <div class="modal-dialog modal-lg vertical-align-center">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <a href="" class="btn btn-default" data-dismiss="modal" style="border: none;">Back</a>
+                                    <button type="button" class="close" data-dismiss="modal">CANCEL</button>
+                                </div>
+                                <div class="modal-body row">
+                                    <div class="col-md-1"></div>
+                                    <div class="col-md-2 modal-desc">
+                                        <span class="modal-text">Report</span>
+                                    </div>
+                                    <div class="col-md-1"></div>
+                                    <div class="col-md-8">
+                                        <img src="<%= image %>" alt="student picture">
+                                        <div style="padding: 10px; font-size: 20px">
+                                            <%= name %>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <a href="" class="btn btn-primary btn-report-next">Next</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <form action="" name="createreport" id="createreport" method="POST">
+                <!-- Modal to enter vitals -->
+                <div class="container">
+                    <div class="modal fade" id="modal-report2">
+                        <div class="vertical-alignment-helper">
+                            <div class="modal-dialog modal-lg vertical-align-center">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <a href="" class="btn btn-default" data-dismiss="modal" style="border: none;">Back</a>
+                                        <button type="button" class="close" data-dismiss="modal">CANCEL</button>
+                                    </div>
+                                    <div class="modal-body row">
+                                        <div class="col-md-1"></div>
+                                        <div class="col-md-2 modal-desc">
+                                            <span class="modal-text">Vitals</span>
+                                        </div>
+                                        <div class="col-md-1"></div>
+                                        <div class="col-md-8">
+                                            <div style="padding: 10px; font-size: 25px">
+                                                <%= name %>
+                                            </div>
+                                            <textarea autofocus name="vitals" rows="8" cols="50" placeholder="Please enter vitals here" id="vitals-textarea"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <a href="" class="btn btn-primary btn-vitals-next">Next</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal to enter symptoms -->
+                <div class="container">
+                    <div class="modal fade" id="modal-report3">
+                        <div class="vertical-alignment-helper">
+                            <div class="modal-dialog modal-lg vertical-align-center">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <a href="" class="btn btn-default" data-dismiss="modal" style="border: none;">Back</a>
+                                        <button type="button" class="close" data-dismiss="modal">CANCEL</button>
+                                    </div>
+                                    <div class="modal-body row">
+                                        <div class="col-md-1"></div>
+                                        <div class="col-md-2 modal-desc">
+                                            <span class="modal-text">Symptoms</span>
+                                        </div>
+                                        <div class="col-md-1"></div>
+                                        <div class="col-md-8">
+                                            <div style="padding: 10px; font-size: 25px">
+                                                <%= name %>
+                                            </div>
+                                            <textarea autofocus name="symptoms" rows="8" cols="50" placeholder="Please enter symptoms here" id="symptoms-textarea"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <a href="" class="btn btn-primary btn-symptoms-next">Next</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal to enter notes -->
+                <div class="container">
+                    <div class="modal fade" id="modal-report4">
+                        <div class="vertical-alignment-helper">
+                            <div class="modal-dialog modal-lg vertical-align-center">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <a href="" class="btn btn-default" data-dismiss="modal" style="border: none;">Back</a>
+                                        <button type="button" class="close" data-dismiss="modal">CANCEL</button>
+                                    </div>
+                                    <div class="modal-body row">
+                                        <div class="col-md-1"></div>
+                                        <div class="col-md-2 modal-desc">
+                                            <span class="modal-text">Notes</span>
+                                        </div>
+                                        <div class="col-md-1"></div>
+                                        <div class="col-md-8">
+                                            <div style="padding: 10px; font-size: 25px">
+                                                <%= name %>
+                                            </div>
+                                            <textarea autofocus name="notes" rows="8" cols="50" placeholder="Please enter notes here" id="notes-textarea"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <a href="" class="btn btn-primary btn-notes-next">Next</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal to review report -->
+                <div class="container">
+                    <div class="modal fade" id="modal-report5">
+                        <div class="vertical-alignment-helper">
+                            <div class="modal-dialog modal-lg vertical-align-center">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <a href="" class="btn btn-default" data-dismiss="modal" style="border: none;">Back</a>
+                                        <button type="button" class="close" data-dismiss="modal">CANCEL</button>
+                                    </div>
+                                    <div class="modal-body row">
+                                        <div class="col-md-1"></div>
+                                        <div class="col-md-2 modal-desc">
+                                            <span class="modal-text">Review Report</span>
+                                        </div>
+                                        <div class="col-md-1"></div>
+                                        <div class="col-md-8">
+                                            <img src="<%= image %>" alt="">
+                                            <div style="padding: 10px; font-size: 25px">
+                                                <%= name %>
+                                            </div>
+                                            <ul id="report-vitals"></ul>
+                                            <ul id="report-symptoms"></ul>
+                                            <ul id="report-notes"></ul>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                      <span class="modal-text">Is all this information correct? If so</span>
+                                      <input type="submit" value="Submit" id="submitreportbtn" class="btn btn-primary">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+
+
+
+        </section>
+
+
+        <% include partials/footer %>

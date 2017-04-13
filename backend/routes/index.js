@@ -50,29 +50,31 @@ router.get('/studentProfile/:id', function(req, res, next) {
   })
 });
 
+// router.get('/createreport/:id', function(req, res, next) {
+//   Student.findById(req.params.id, function(err, student) {
+//     console.log('I am the req.params.id, ', req.params.id);
+//     if (err) { console.log('err: ', err) }
+//     res.render('createreport', {
+//       name: student.name,
+//       image: student.image
+//     })
+//   })
+// });
+
 router.get('/createreport/:id', function(req, res, next) {
-  console.log(req.user);
   Student.findById(req.params.id, function(err, student) {
-    console.log('I am the req.params.id, ', req.params.id);
-    if (err) { console.log('err: ', err) }
-    res.render('createreport', {
-      name: student.name,
-      image: student.image
-    })
-  })
+      res.render('createreport', {
+        name: student.name,
+        image: student.image
+      });
+    });
 });
 
-
-router.post('/createreport', function(req, res, next) {
-  var userId = req.user.identities[0].user_id;
-  var email = req.user._json.email;
-
-  console.log()
+router.post('/createreport/:id', function(req, res, next) {
   console.log('id is: ', req.params.id)
   Student.findOne({
     _id: req.params.id
   }, function(err, student) {
-    console.log('student is: ', student)
     student.report.push({
       date: req.body.date,
       vitals: req.body.vitals,
@@ -88,11 +90,43 @@ router.post('/createreport', function(req, res, next) {
         });
         console.log('Error: ', err);
       }
+      console.log('student is: ', student)
 
-      res.json(student);
+      res.redirect('/nurses');
     });
   });
 });
+
+// router.post('/createreport', function(req, res, next) {
+//   var userId = req.user.identities[0].user_id;
+//   var email = req.user._json.email;
+//
+//   console.log()
+//   console.log('id is: ', req.params.id)
+//   Student.findOne({
+//     _id: req.params.id
+//   }, function(err, student) {
+//     console.log('student is: ', student)
+//     student.report.push({
+//       date: req.body.date,
+//       vitals: req.body.vitals,
+//       symptoms: req.body.symptoms,
+//       notes: req.body.notes,
+//     });
+//
+//     student.save(function(err, student) {
+//       if (err) {
+//         res.status(500).send({
+//           status: 'Error',
+//           error: err
+//         });
+//         console.log('Error: ', err);
+//       }
+//
+//       res.json(student);
+//     });
+//   });
+// });
 
 router.get('/guardian', function(req, res, next) {
   res.render('guardian');
