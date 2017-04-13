@@ -13,16 +13,23 @@
       </nav>
     </div>
 <div class="content-container col-md-5">
-  <p><img src="<%=image%>"/></p>
-  <p>Name: <%= name %></p>
-  <p>DOB: <%= birthdate %></p>
-  <p>Guardian: <%= guardian %></p>
-  <p>Guardian Number: <%= guardian_number %></p>
-  <p>Guardian Email: <%= guardian_email %></p>
-  <p>Medical History: <%= medicalHistory %></p>
-  <p>Allergies: <%= allergies %></p>
-  <p>Immunizations: <%= immunizations %></p>
-  <h3>Reports</h3>
+  <div class="student-name"><%= name %></div>
+  <div></div>
+  <div class="student-image"><img src="<%=image%>"/></div>
+  <div class="student-report-info">Birthdate: <%= birthdate %></div>
+  <div class="student-report-title">Parent/Guardian Contact</div>
+  <div class="student-report-info"><span style="font-size: 20px;"><%= guardian %></span>
+    <br>
+    <br>Phone: <%= guardian_number %>
+    <br>Email: <%= guardian_email %></div>
+  <div class="student-report-title">Medical History</div>
+  <div class="student-report-info"><%= medicalHistory %></div>
+  <div class="student-report-title">Allergies</div>
+  <div class="student-report-info"><%= allergies %></div>
+  <div class="student-report-title">Immunizations</div>
+  <div class="student-report-info"><%= immunizations %></div>
+  <div class="student-report-title">Reports</div>
+
   <% for (var i=0, x=reports.length; i<x; i++) { %>
     <p class="report top">Date: <%= reports[i].date %></p>
     <p class="report">Vitals: <%= reports[i].vitals %></p>
