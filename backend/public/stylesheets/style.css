@@ -64,6 +64,7 @@ footer h4 {
 
 /*end andrew test code*/
 
+<<<<<<< HEAD
 #search {
   float: right;
   padding-bottom: 30px;
@@ -74,8 +75,11 @@ footer h4 {
 }
 
 .funny {
+=======
+/*.funny{
+>>>>>>> samK
   padding-top: 30px;
-}
+}*/
 
 .right, .left {
   color: #757575;
@@ -98,6 +102,18 @@ footer h4 {
   align-items: center;
 }
 
+<<<<<<< HEAD
+=======
+section {
+  height: 100vh;
+  background-image: url(../images/kiwi.svg);
+  background-size: cover;
+  margin: 0 auto;
+  overflow: auto;
+  padding: 90px 20px 0 90px;
+}
+
+>>>>>>> samK
 #landing {
   height: 70vh;
   background-image: url(../images/kiwi.svg);
@@ -251,11 +267,6 @@ li {
   color: #757575;
 }
 
-.searchBar{
-  display: inline-block;
-  float: right;
-}
-
 .btn-signup, .btn-search {
   color: #FFFFFF;
   background-color: #F88E79;
@@ -363,15 +374,19 @@ a.btn-login{
   margin-left: 10px;
 }
 
-.borderLine {
-  border-bottom: solid 3px #8AD9BB;
-}
-
-.navHover:hover {
+.navHover:hover{
+>>>>>>> samK
   background-color: #8AD9BB;
   padding-left: 10px;
   color: #757575;
   border-radius: 15px 50px 50px 15px;
+}
+
+.kidsHover:hover{
+  background-color: #8AD9BB;
+  padding: 6px 0 6px 0;
+  color: #757575;
+  border-radius: 15px;
 }
 
 .studentNav, a:hover {
@@ -416,14 +431,22 @@ a.btn-login{
 
 .box {
   display: inline-block;
+  float: left;
+  position: relative;
   width: 500px;
   margin: 0 10px 20px 50px;
   padding: 10px 15px 0 15px;
-  border: 3px solid #8AD9BB;
+  bottom: 100px;
+  left: 50px;
 }
 
-.optionsBox{
-  position: static;
+#search{
+  position: relative;
+  float: right;
+  padding-bottom: 30px;
+  left: 70px;
+  bottom: 50px;
+}
 
 .footer-top {
   text-align: right;
@@ -493,4 +516,13 @@ li.co-name{
   padding: 10px;
   color: #757575;
   font-size: 15px;
+}
+
+.coolKids{
+  border: 2px solid #8AD9BB;
+  border-radius: 5px;
+  padding: 5px;
+  margin-top: 10px;
+  text-align: center;
+
 }
