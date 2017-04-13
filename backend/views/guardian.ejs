@@ -12,27 +12,36 @@
                     <li class="subNav"><a href="#"><div class="navHover">Medical History</div></a></li>
                     <li class="subNav"><a href="#"><div class="navHover">Reports</div></a></li>
                   </ul>
+                <div class="guardNav"><a href="#"><div class="navHover">Add New Student</div></a></div>
                 <div class="guardNav guardNavBottom"><a href="#"><div class="navHover">Messages</div></a></div>
               </ul>
             </nav>
+    <div class="theReport">
       <div class="content-container col-md-5">
-      <p><img src="<%=image%>"/></p>
-      <p class="guardian-profile">Name: <%= name %></p>
-      <p class="guardian-profile">DOB: <%= birthdate %></p>
-      <p class="guardian-profile">Guardian: <%= guardian %></p>
-      <p class="guardian-profile">Guardian Number: <%= guardian_number %></p>
-      <p class="guardian-profile">Guardian Email: <%= guardian_email %></p>
-      <p class="guardian-profile">Medical History: <%= medicalHistory %></p>
-      <p class="guardian-profile">Allergies: <%= allergies %></p>
-      <p class="guardian-profile">Immunizations: <%= immunizations %></p>
-      <h3>Reports</h3>
-      <% for (var i=0, x=reports.length; i<x; i++) { %>
-        <p class="guardian-report top">Date: <%= reports[i].date %></p>
-        <p class="guardian-report">Vitals: <%= reports[i].vitals %></p>
-        <p class="guardian-report">Symptoms: <%= reports[i].symptoms %></p>
-        <p class="guardian-report">Notes: <%= reports[i].call_notes %></p>
-        <p class="guardian-report bottom">Treatment Plan: <%= reports[i].treatment_plan %></p>
-      <% } %>
+        <div class="student-name"><%= name %></div>
+        <div></div>
+        <div class="student-image"><img src="<%=image%>"/></div>
+        <div class="report-info">Birthdate: <%= birthdate %></div>
+        <div class="report-title">Parent/Guardian Contact </div>
+        <div class="report-info"><span style="font-size: 20px;"><%= guardian %></span>
+          <br>
+          <br>Phone: <%= guardian_number %>
+          <br>Email: <%= guardian_email %></div>
+        <div class="report-title">Medical History </div>
+          <div class="report-info"><%= medicalHistory %></div>
+        <div class="report-title">Allergies </div>
+          <div class="report-info"><%= allergies %></div>
+        <div class="report-title">Immunizations </div>
+          <div class="report-info"><%= immunizations %></div>
+        <h3>Reports</h3>
+        <% for (var i=0, x=reports.length; i<x; i++) { %>
+          <p class="report top">Date: <%= reports[i].date %></p>
+          <p class="report">Vitals: <%= reports[i].vitals %></p>
+          <p class="report">Symptoms: <%= reports[i].symptoms %></p>
+          <p class="report">Notes: <%= reports[i].call_notes %></p>
+          <p class="report bottom">Treatment Plan: <%= reports[i].treatment_plan %></p>
+        <% } %>
+    </div>
     </div>
   </div>
   </div>

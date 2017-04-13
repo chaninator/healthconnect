@@ -64,7 +64,6 @@ footer h4 {
 
 /*end andrew test code*/
 
-<<<<<<< HEAD
 #search {
   float: right;
   padding-bottom: 30px;
@@ -348,7 +347,6 @@ a.btn-login{
 
 .studentNav, a:hover {
   text-decoration: none;
-  /*background-color: #8AD9BB;*/
 }
 
 .funny, .coolKids {
@@ -366,7 +364,6 @@ a.btn-login{
 }
 
 .navHover:hover{
->>>>>>> samK
   background-color: #8AD9BB;
   padding-left: 10px;
   color: #757575;
@@ -480,14 +477,6 @@ li.co-name{
   padding: 10px;
 }
 
-.student-report-title {
-  font-size: 26px;
-  border-bottom: 1px solid #8AD9BB;
-  border-top: 1px solid #8AD9BB;
-  margin: 10px 0 10px 10px;
-  padding: 10px;
-}
-
 .content-container {
   text-align: left;
 }
@@ -500,13 +489,36 @@ li.co-name{
   font-size: 18px;
 }
 
-.student-guardian-info, .student-report-info {
+.student-guardian-info,  {
   background: rgba(138,217,187,.2);
   /*border-bottom: 1px solid #8AD9BB;*/
   margin: 10px 0 10px 10px;
   padding: 10px;
   color: #757575;
   font-size: 15px;
+}
+
+.report-title {
+  font-size: 26px;
+  border-bottom: 1px solid #8AD9BB;
+  border-top: 1px solid #8AD9BB;
+  margin: 10px 0 10px 10px;
+  padding: 10px;
+}
+
+.student-guardian-info, .report-info {
+  background: rgba(138,217,187,.2);
+  /*border-bottom: 1px solid #8AD9BB;*/
+  margin: 10px 0 10px 10px;
+  padding: 10px;
+  color: #757575;
+  font-size: 15px;
+}
+
+.theReport{
+  position: relative;
+  left: 170px;
+  bottom: 75px;
 }
 
 .coolKids{
