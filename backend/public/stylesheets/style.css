@@ -13,6 +13,25 @@ header {
   background-color: white;
 }
 
+section {
+  height: 91vh;
+  background-image: url(../images/kiwi.svg);
+  background-size: cover;
+  margin: 0 auto;
+  overflow: auto;
+  padding: 80px 0;
+}
+
+footer {
+  height: 100px;
+  background-color: #B1748F;
+  color: #FFFFFF;
+}
+
+footer h4 {
+  color: #FFFFFF;
+}
+
 .hc-logo {
   border z-index: 2;
 }
@@ -27,6 +46,7 @@ header {
 }
 
 /*Andrew test code*/
+
 #header_container {
   left: 0;
   position: fixed;
@@ -40,16 +60,20 @@ header {
   text-align: center;
   z-index: 5;
 }
+
+
 /*end andrew test code*/
 
-#search{
+<<<<<<< HEAD
+#search {
   float: right;
   padding-bottom: 30px;
 }
 
-.funny{
-  padding-top: 30px;
+.landing-container {
+  overflow: auto;
 }
+
 
 .right, .left {
   color: #757575;
@@ -78,6 +102,15 @@ section {
   background-size: cover;
   margin: 0 auto;
   overflow: auto;
+  padding: 90px 20px 0 90px;
+}
+
+#landing {
+  height: 70vh;
+  background-image: url(../images/kiwi.svg);
+  background-size: cover;
+  margin: 0 auto;
+  overflow: auto;
   padding: 80px 0;
 }
 
@@ -93,17 +126,12 @@ section {
 
 .opac {
   height: 80%;
-  margin: 100px 93px 0 93px;
+  margin: 0 93px 0 93px;
   background: rgba(255, 255, 255, .7);
   border-radius: 0 0 20px 20px;
   text-align: center;
-  padding-top: 50px;
+  padding-top: 100px;
   overflow: auto;
-}
-
-footer {
-  height: 75px;
-  background-color: #B1748F;
 }
 
 .back-pic {
@@ -122,7 +150,9 @@ div img {
   margin: 10px;
 }
 
-a {
+
+a:link, a:visited{
+  text-decoration: none;
   color: #757575;
 }
 
@@ -130,7 +160,7 @@ h4 {
   font-size: 145%;
   display: inline;
   font-weight: bold;
-  color: #8AD9BB
+  color: #8AD9BB;
 }
 
 .modal-desc {
@@ -218,10 +248,28 @@ li {
   list-style: none;
 }
 
+#search-keyword{
+  outline: none;
+  border: 0px;
+  border-radius: 5px;
+  height: 40px;
+  width: 180px;
+  background-color: #fcfffd;
+  color: #757575;
+}
+
 .btn-signup, .btn-search {
   color: #FFFFFF;
   background-color: #F88E79;
   border: 2px solid #F88E79;
+}
+
+a.btn-signup, a.btn-search{
+  color: #FFFFFF;
+}
+
+a.btn-login{
+  color: #8AD9BB;
 }
 
 .btn-login {
@@ -229,7 +277,7 @@ li {
   border: 2px solid #8AD9BB;
 }
 
-.btn-search{
+.btn-search {
   z-index: -1;
 }
 
@@ -255,13 +303,13 @@ li {
   background-color: #FFFFFF;
   color: #F88E79;
   border: 2px solid;
-  border-color: #F88E79
+  border-color: #F88E79;
 }
 
-
 .welcome-text {
-  font-size: 35px;
+  font-size: 28px;
   padding-bottom: 15px;
+  color: #757575;
 }
 
 .welcome-container {
@@ -276,28 +324,34 @@ li {
 }
 
 
-.nurseNav, .studentNav{
+.nav>li>a:hover{
+  text-decoration: none;
+  background-color: inherit;
+}
+
+.nurseNav, .studentNav, .guardNav, .subNav{
   display: block;
   text-align: left;
-  font-size: 26px;
+  font-size: 22px;
   border-bottom: solid 2px #8AD9BB;
   color: #757575;
   padding: 10px 0 10px 25px;
 }
 
-.nurseNavBottom, .studentNavBottom{
+.nurseNavBottom, .studentNavBottom, .guarNavBottom, .subNavBottom {
   color: black;
   display: block;
   text-align: left;
-  font-size: 26px;
+  font-size: 22px;
   border-bottom: none;
 }
 
-.studentNav, a:hover{
+.studentNav, a:hover {
   text-decoration: none;
+  /*background-color: #8AD9BB;*/
 }
 
-.funny, .coolKids{
+.funny, .coolKids {
   display: block;
   text-align: center;
   font-size: 20px;
@@ -306,27 +360,31 @@ li {
 }
 
 .studentList{
-  text-align: right;
+  text-align: center;
   display: block;
   margin-left: 10px;
 }
 
-.borderLine{
-  border-bottom: solid 3px #8AD9BB;
-}
-
 .navHover:hover{
+>>>>>>> samK
   background-color: #8AD9BB;
   padding-left: 10px;
   color: #757575;
   border-radius: 15px 50px 50px 15px;
 }
 
+.kidsHover:hover{
+  background-color: #8AD9BB;
+  padding: 6px 0 6px 0;
+  color: #757575;
+  border-radius: 15px;
+}
+
 .studentNav, a:hover {
   text-decoration: none;
 }
 
-.text-box-one {
+.text-box-one, .text-box-two {
   background-color: #F88E79;
   height: 100px;
   color: white;
@@ -340,6 +398,7 @@ li {
   height: 500px;
   color: #757575;
   font-size: 18px;
+  overflow: auto;
 }
 
 .snippet-titles {
@@ -359,4 +418,101 @@ li {
 
 .snippet {
   margin-left: 30px;
+}
+
+.box {
+  display: inline-block;
+  float: left;
+  position: relative;
+  width: 500px;
+  margin: 0 10px 20px 50px;
+  padding: 10px 15px 0 15px;
+  bottom: 100px;
+  left: 50px;
+}
+
+#search{
+  position: relative;
+  float: right;
+  padding-bottom: 30px;
+  left: 70px;
+  bottom: 50px;
+}
+
+.footer-top {
+  text-align: right;
+  border-bottom: 1px solid #F88E79;
+}
+
+.footer-name-slogan {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding-top: 10px;
+  margin-right: 20px;
+}
+
+.footer-nav {
+  text-align: left;
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+}
+
+.footer-nav li {
+  padding: 10px 30px;
+}
+
+.footer-nav a{
+  color: white;
+}
+
+li.co-name{
+  font-size: 20px;
+  padding-right: 15px;
+}
+
+.student-name {
+  font-size: 26px;
+  border-bottom: 1px solid #8AD9BB;
+  margin: 10px 0 10px 10px;
+  padding: 10px;
+}
+
+.student-report-title {
+  font-size: 26px;
+  border-bottom: 1px solid #8AD9BB;
+  border-top: 1px solid #8AD9BB;
+  margin: 10px 0 10px 10px;
+  padding: 10px;
+}
+
+.content-container {
+  text-align: left;
+}
+
+.student-image img {
+  max-height: 200px;
+}
+
+.guardian-info {
+  font-size: 18px;
+}
+
+.student-guardian-info, .student-report-info {
+  background: rgba(138,217,187,.2);
+  /*border-bottom: 1px solid #8AD9BB;*/
+  margin: 10px 0 10px 10px;
+  padding: 10px;
+  color: #757575;
+  font-size: 15px;
+}
+
+.coolKids{
+  border: 2px solid #8AD9BB;
+  border-radius: 5px;
+  padding: 5px;
+  margin-top: 10px;
+  text-align: center;
 }
