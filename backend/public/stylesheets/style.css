@@ -147,6 +147,10 @@ input.submit-student {
   margin-top: 60px;
 }
 
+.hello a {
+  color: #FFFFFF;
+}
+
 footer {
   height: 75px;
   background-color: #B1748F;

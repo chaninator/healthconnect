@@ -1,8 +1,43 @@
 <% include partials/header %>
 
 <section>
+
+
   <h2 class="delete-name">Are you sure you want to delete <%=name%>?</h2>
-  <!--ajax request here-->
+  <button type="button" name="button" id="the-delete-button">Delete</button>
+  <div class="hello">
+    <a href="/nurses">Go Back</a>
+  </div>
+  <script>
+  function deleteThatStudent(){
+     var getWeather = $.ajax({
+       url: '/deleteStudent/<%=id%>',
+       method: 'DELETE',
+       dataType:'json',
+       data: {}
+     });
+
+  getWeather.done(function(response){
+    console.log('success');
+     });
+
+     getWeather.fail(function(error){
+       console.log(error);
+     });
+
+     getWeather.always(function(){
+       console.log('hi')
+     });
+
+
+   }
+
+   $('#the-delete-button').on('click', function(){
+        deleteThatStudent();
+      });
+  </script>
+
+
 
 </section>
 
