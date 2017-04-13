@@ -81,6 +81,15 @@ section {
   padding: 80px 0;
 }
 
+#landing {
+  height: 70vh;
+  background-image: url(../images/kiwi.svg);
+  background-size: cover;
+  margin: 0 auto;
+  overflow: auto;
+  padding: 80px 0;
+}
+
 .slogan {
   color: #8AD9BB;
   font-size: 18px;
@@ -93,11 +102,11 @@ section {
 
 .opac {
   height: 80%;
-  margin: 100px 93px 0 93px;
+  margin: 0 93px 0 93px;
   background: rgba(255, 255, 255, .7);
   border-radius: 0 0 20px 20px;
   text-align: center;
-  padding-top: 50px;
+  padding-top: 100px;
   overflow: auto;
 }
 
@@ -326,7 +335,7 @@ li {
   text-decoration: none;
 }
 
-.text-box-one {
+.text-box-one, .text-box-two {
   background-color: #F88E79;
   height: 100px;
   color: white;
