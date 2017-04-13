@@ -24,12 +24,46 @@
   <p>Immunizations: <%= immunizations %></p>
   <h3>Reports</h3>
   <% for (var i=0, x=reports.length; i<x; i++) { %>
-    <p class="report top">Date: <%= reports[i].date %></p>
+    <p><a id="show-student-report" href="/studentReport/<%=id%>/<%= reports[i]%>"><%= reports[i].date %></a></p>
+
+    <!-- <p class="report top">Date: <%= reports[i].date %></p>
     <p class="report">Vitals: <%= reports[i].vitals %></p>
     <p class="report">Symptoms: <%= reports[i].symptoms %></p>
     <p class="report">Notes: <%= reports[i].call_notes %></p>
-    <p class="report bottom">Treatment Plan: <%= reports[i].treatment_plan %></p>
+    <p class="report bottom">Treatment Plan: <%= reports[i].treatment_plan %></p> -->
   <% } %>
+
+  <div class="container">
+      <div class="modal animated fadeIn " id="show-student-report">
+          <div class="vertical-alignment-helper">
+              <div class="modal-dialog modal-lg vertical-align-center">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <a href="" class="btn btn-default" data-dismiss="modal" style="border: none;">Back</a>
+                          <button type="button" class="close" data-dismiss="modal">CANCEL</button>
+                      </div>
+                      <div class="modal-body row">
+                          <div class="col-md-1"></div>
+                          <div class="col-md-2 modal-desc">
+                              <span class="modal-text">Report</span>
+                          </div>
+                          <div class="col-md-1"></div>
+                          <div class="col-md-8">
+                              <img src="<%= image %>" alt="student picture">
+                              <div style="padding: 10px; font-size: 20px">
+                                  <%= name %>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="modal-footer">
+                          <a href="" class="btn btn-primary btn-report-next">Next</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
   <p><a id="generate-report" href="/createreport/<%=id%>">Create New Report</a></p>
   </div>
 </div>

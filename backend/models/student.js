@@ -1,10 +1,10 @@
 var mongoose = require('mongoose');
 var ObjectId = mongoose.Schema.ObjectId;
-
+var moment = require('moment');
 
 
 var reportSchema = new mongoose.Schema({
-  date: { type: String, default: new Date() },
+  date: { type: String, default: moment(new Date()).format('MMM Do YYYY, h:mm a') },
   vitals: { type: String, required: true },
   symptoms: { type: String, required: true },
   notes: { type: String, required: true }
