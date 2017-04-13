@@ -126,6 +126,11 @@ a {
   color: #757575;
 }
 
+a:link, a:visited{
+  text-decoration: none;
+  color: #757575;
+}
+
 h4 {
   font-size: 145%;
   display: inline;
@@ -275,6 +280,10 @@ li {
   list-style-type: none;
 }
 
+.nav>li>a:hover{
+  text-decoration: none;
+  background-color: inherit;
+}
 
 .nurseNav, .studentNav, .guardNav, .subNav{
   display: block;
@@ -295,6 +304,7 @@ li {
 
 .studentNav, a:hover{
   text-decoration: none;
+  /*background-color: #8AD9BB;*/
 }
 
 .funny, .coolKids{
