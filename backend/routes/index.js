@@ -39,7 +39,8 @@ router.get('/studentProfile/:id', function(req, res, next) {
       guardian: student.guardian_name,
       guardian_number: student.guardian_number,
       guardian_email: student.guardian_email,
-      medicalHistory: student.medications,
+      history: student.history,
+      medications: student.medications,
       allergies: student.allergies,
       immunizations: student.immunizations,
       reports: student.report,
@@ -76,6 +77,59 @@ router.get('/guardian', ensureLoggedIn, function(req, res, next) {
   });
 });
 
+router.get('/addStudent', function(req, res, next) {
+  res.render('addStudent');
+})
+
+router.post('/addStudent', function(req, res, next) {
+
+  var newStudent = new Student({
+    name: req.body.name,
+    image: req.body.image,
+    dob: req.body.dob,
+    history: req.body.history,
+    allergies: req.body.allergies,
+    medications: req.body.medications,
+    immunizations: req.body.immunizations,
+    guardian_name: req.body.guardian_name,
+    guardian_number: req.body.guardian_number,
+    guardian_email: req.body.guardian_email,
+    reports: req.body.reports
+    // report: req.body.reportId
+  });
+
+  newStudent.save(function(err, student) {
+    if (err) {
+      res.status(500).send({
+        status: 'Error',
+        error: err
+      });
+      console.log('Error: ', err);
+    } else {
+      res.render('addStudent');
+    }
+  });
+});
+
+router.get('/deleteStudent/:id', function(req, res, next) {
+  Student.findById(req.params.id, function(err, student) {
+    if (err) console.log(err);
+    res.render('deleteStudent', {
+      name: student.name,
+      id: student._id
+    });
+  });
+});
+
+router.delete('/deleteStudent/:id', function(req, res, next) {
+  Student.findByIdAndRemove(req.params.id, function(err, student) {
+    if (err) console.log(err);
+    res.json({
+      student: student
+  });
+});
+});
+
 router.get('/doctor', function(req, res, next) {
   res.render('doctor');
 });
@@ -96,40 +150,6 @@ router.get('/callback',
     // res.json(res);
     res.redirect(req.session.returnTo || '/user');
     // console.log('req4: ', req);
-    console.log('res4: ', res);
-  });
-
-
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Health Connect', env: env });
-});
-
-router.get('/nurse', function(req, res, next) {
-  res.render('nurse');
-});
-
-
-router.get('/doctor', function(req, res, next) {
-  res.render('doctor');
-});
-
-router.get('/login',
-  function(req, res){
-    res.render('login', { env: env });
-  });
-
-router.get('/logout', function(req, res){
-  req.logout();
-  res.redirect('/');
-});
-
-router.get('/callback',
-  passport.authenticate('auth0', { failureRedirect: '/url-if-something-fails' }),
-  function(req, res) {
-    // res.json(res);
-    res.redirect('/user');
-    console.log('req4: ', req);
     console.log('res4: ', res);
   });
 

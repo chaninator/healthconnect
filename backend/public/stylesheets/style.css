@@ -110,6 +110,43 @@ section {
   overflow: auto;
 }
 
+.newStudenth1 {
+  margin-top: 78px;
+  text-align: center;
+  color: black;
+  font-size: 24pt;
+  color: #F88E79;
+}
+
+.student_form {
+  text-align: center;
+}
+
+.student_form input {
+  margin: 2px;
+  border-radius: 2px;
+}
+
+input.submit-student {
+  color: #FFFFFF;
+  background-color: #F88E79;
+  border: 2px solid #F88E79;
+  font-size: 18px;
+  margin: 15px;
+  padding: 5px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+}
+
+.student_form a {
+  background-color: none;
+  color: #FFFFFF;
+}
+
+.delete-name {
+  margin-top: 60px;
+}
+
 footer {
   height: 75px;
   background-color: #B1748F;
@@ -225,6 +262,10 @@ h4 {
 
 li {
   list-style: none;
+}
+
+.logout-area {
+ margin-top: 19px;
 }
 
 .btn-signup, .btn-search {
