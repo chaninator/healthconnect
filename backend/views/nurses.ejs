@@ -19,18 +19,22 @@
         </nav>
       </div>
       <div class="col-md-8">
+      <div class="searchBar">
         <form id="search">
           <input type="search" id="search-keyword">
           <a href="#" class="btn-search">Search</a>
         </form>
+      </div>
         <br></br>
-        <ul class="funny">
-          <p class="studentList">Students</p>
-          <div class="borderLine"></div>
-          <% for (var i=0, x=students.length; i<x; i++) { %>
-            <a href="/studentProfile/<%= students[i]._id%>" class="coolKids"><p><%= students[i].name %></p></a>
-          <% } %>
-        </ul>
+          <div class="box">
+            <ul class="funny">
+              <p class="studentList">Students</p>
+              <div class="borderLine"></div>
+              <% for (var i=0, x=students.length; i<x; i++) { %>
+                <a href="/studentProfile/<%= students[i]._id%>" class="coolKids"><p><%= students[i].name %></p></a>
+              <% } %>
+            </ul>
+        </div>
       </div>
     </div>
   </div>

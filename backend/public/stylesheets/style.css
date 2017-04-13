@@ -229,13 +229,28 @@ li {
   list-style: none;
 }
 
+#search-keyword{
+  outline: none;
+  border: 0px;
+  border-radius: 5px;
+  height: 40px;
+  width: 180px;
+  background-color: #fcfffd;
+  color: #757575;
+}
+
+.searchBar{
+  display: inline-block;
+  float: right;
+}
+
 .btn-signup, .btn-search {
   color: #FFFFFF;
   background-color: #F88E79;
   border: 2px solid #F88E79;
 }
 
-a.btn-signup{
+a.btn-signup, a.btn-search{
   color: #FFFFFF;
 }
 
@@ -274,7 +289,7 @@ a.btn-login{
   background-color: #FFFFFF;
   color: #F88E79;
   border: 2px solid;
-  border-color: #F88E79
+  border-color: #F88E79;
 }
 
 
@@ -330,7 +345,7 @@ a.btn-login{
 }
 
 .studentList{
-  text-align: right;
+  text-align: center;
   display: block;
   margin-left: 10px;
 }
@@ -385,4 +400,13 @@ a.btn-login{
 
 .snippet {
   margin-left: 30px;
+}
+
+.box {
+  display: inline-block;
+  width: 500px;
+  margin-left: 50px;
+  margin-top: 10px;
+  padding: 5px;
+  border: 2px solid #8AD9BB;
 }
