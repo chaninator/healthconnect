@@ -276,7 +276,7 @@ li {
 }
 
 
-.nurseNav, .studentNav{
+.nurseNav, .studentNav, .guardNav{
   display: block;
   text-align: left;
   font-size: 26px;
