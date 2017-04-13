@@ -123,10 +123,7 @@ router.get('/deleteStudent/:id', function(req, res, next) {
 
 router.delete('/deleteStudent/:id', function(req, res, next) {
   Student.findByIdAndRemove(req.params.id, function(err, student) {
-    if (err) console.log(err);
-    res.json({
-      student: student
-  });
+  res.redirect('/nurses');
 });
 });
 

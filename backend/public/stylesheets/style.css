@@ -3,13 +3,16 @@ html, body {
   margin: 0;
   min-width: 75%;
 }
+
 body {
   font-family: 'Arial Rounded MT Bold', sans-serif;
 }
+
 header {
   margin: 0 auto;
   background-color: white;
 }
+
 section {
   height: 91vh;
   background-image: url(../images/kiwi.svg);
@@ -18,17 +21,21 @@ section {
   overflow: auto;
   padding: 80px 0;
 }
+
 footer {
   height: 100px;
   background-color: #B1748F;
   color: #FFFFFF;
 }
+
 footer h4 {
   color: #FFFFFF;
 }
+
 .hc-logo {
   border z-index: 2;
 }
+
 #main-header {
   padding: 0;
   border-bottom: 2px #F88E79 solid;
@@ -37,7 +44,10 @@ footer h4 {
   z-index: 5;
   background-color: white;
 }
+
+
 /*Andrew test code*/
+
 #header_container {
   left: 0;
   position: fixed;
@@ -45,30 +55,38 @@ footer h4 {
   top: 0;
   z-index: 5;
 }
+
 #header {
   margin: 0 auto;
   text-align: center;
   z-index: 5;
 }
+
+
 /*end andrew test code*/
+
 #search {
   float: right;
   padding-bottom: 30px;
 }
+
 .landing-container {
   overflow: auto;
 }
+
 .right, .left {
   color: #757575;
   padding: 30px;
   text-align: right;
   padding-bottom: 15px;
 }
+
 .right {
   margin-top: 40px;
   padding-right: 5px;
   margin-right: 88px;
 }
+
 .left {
   text-align: left;
   padding-left: 5px;
@@ -76,6 +94,7 @@ footer h4 {
   display: flex;
   align-items: center;
 }
+
 section {
   height: 100vh;
   background-image: url(../images/kiwi.svg);
@@ -84,6 +103,7 @@ section {
   overflow: auto;
   padding: 90px 20px 0 90px;
 }
+
 #landing {
   height: 70vh;
   background-image: url(../images/kiwi.svg);
@@ -92,14 +112,17 @@ section {
   overflow: auto;
   padding: 80px 0;
 }
+
 .slogan {
   color: #8AD9BB;
   font-size: 18px;
   padding-top: 30px;
 }
+
 .kiwi {
   background-size: cover;
 }
+
 .opac {
   height: 80%;
   margin: 0 93px 0 93px;
@@ -109,9 +132,11 @@ section {
   padding-top: 100px;
   overflow: auto;
 }
+
 .back-pic {
   background: cover;
 }
+
 .btn-users {
   display: flex;
   justify-content: center;
@@ -119,19 +144,23 @@ section {
   text-align: center;
   margin-top: 200px;
 }
+
 div img {
   margin: 10px;
 }
-a:link, a:visited{
+
+a:link, a:visited {
   text-decoration: none;
   color: #757575;
 }
+
 h4 {
   font-size: 145%;
   display: inline;
   font-weight: bold;
   color: #8AD9BB;
 }
+
 .modal-desc {
   font-size: 20px;
   text-align: left;
@@ -139,30 +168,36 @@ h4 {
   border-top: 2px solid #8AD9BB;
   border-bottom: 2px solid #8AD9BB;
 }
+
 .modal-footer, .modal-header {
   border-top: none;
   border-bottom: none;
 }
+
 .modal-text {
   padding-left: 10px;
 }
+
 .modal-body {
   min-height: 300px;
   max-height: calc(100vh - 210px);
   overflow-y: auto;
 }
+
 .vertical-alignment-helper {
   display: table;
   height: 100%;
   width: 100%;
   pointer-events: none;
 }
+
 .vertical-align-center {
   /* To center vertically */
   display: table-cell;
   vertical-align: middle;
   pointer-events: none;
 }
+
 .modal-content {
   /* Bootstrap sets the size of the modal in the modal-dialog class, we need to inherit it */
   width: inherit;
@@ -171,27 +206,34 @@ h4 {
   margin: 0 auto;
   pointer-events: all;
 }
+
 .modal-header {
   margin-bottom: 100px;
 }
+
 .btn-primary {
   background-color: #8AD9BB;
   border-color: #8AD9BB;
 }
+
 .report-info {
   text-align: left;
 }
+
 .modal-dialog {
   width: 1000px;
 }
+
 .studentInfo {
   font-size: 16px;
   text-decoration: none;
 }
+
 .modal-content {
   max-height: calc(100vh - 210px);
   overflow-y: auto;
 }
+
 .guardian-nav li {
   list-style: none;
   text-align: left;
@@ -199,10 +241,12 @@ h4 {
   width: 12em;
   border-top: 2px solid #8AD9BB;
 }
+
 li {
   list-style: none;
 }
-#search-keyword{
+
+#search-keyword {
   outline: none;
   border: 2px line #757575;
   border-radius: 5px;
@@ -211,64 +255,82 @@ li {
   background-color: #fcfffd;
   color: #757575;
 }
+
 .btn-signup, .btn-search {
   color: #FFFFFF;
   background-color: #F88E79;
   border: 2px solid #F88E79;
 }
-a.btn-signup, a.btn-search{
+
+a.btn-signup, a.btn-search {
   color: #FFFFFF;
 }
-a.btn-login{
+
+a.btn-login {
+  color: #FFFFFF;
+}
+
+a.btn-login {
   color: #8AD9BB;
 }
+
 .btn-login {
   color: #8AD9BB;
   border: 2px solid #8AD9BB;
 }
+
 .btn-search {
   z-index: -1;
 }
+
 .btn-signup, .btn-login, .btn-search {
   font-size: 18px;
   margin: 15px;
   padding: 10px 25px;
   border-radius: 50px;
 }
+
 .btn-signup:hover, .btn-login:hover, .btn-search:hover {
   text-decoration: none;
 }
+
 .btn-login:hover {
   background-color: #8AD9BB;
   color: white;
   border: 2px solid;
-  border-color: #8AD9BB
+  border-color: #8AD9BB;
 }
+
 .btn-signup:hover, .btn-search:hover {
   background-color: #FFFFFF;
   color: #F88E79;
   border: 2px solid;
   border-color: #F88E79;
 }
+
 .welcome-text {
   font-size: 28px;
   padding-bottom: 15px;
   color: #757575;
 }
+
 .welcome-container {
   width: 50%;
   display: table;
   margin: 0 auto;
   padding-top: 30px;
 }
+
 .studentNav, ul {
   list-style-type: none;
 }
-.nav>li>a:hover{
+
+.nav>li>a:hover {
   text-decoration: none;
   background-color: inherit;
 }
-.nurseNav, .studentNav, .guardNav, .subNav{
+
+.nurseNav, .studentNav, .guardNav, .subNav {
   display: block;
   text-align: left;
   font-size: 22px;
@@ -276,6 +338,7 @@ a.btn-login{
   color: #757575;
   padding: 10px 0 10px 25px;
 }
+
 .nurseNavBottom, .studentNavBottom, .guarNavBottom, .subNavBottom {
   color: black;
   display: block;
@@ -283,9 +346,11 @@ a.btn-login{
   font-size: 22px;
   border-bottom: none;
 }
+
 .studentNav, a:hover {
   text-decoration: none;
 }
+
 .funny, .coolKids {
   display: block;
   text-align: center;
@@ -293,26 +358,31 @@ a.btn-login{
   color: #757575;
   padding: 10px 0 10px 18px;
 }
-.studentList{
+
+.studentList {
   text-align: center;
   display: block;
   margin-left: 10px;
 }
-.navHover:hover{
+
+.navHover:hover {
   background-color: #8AD9BB;
   padding-left: 10px;
   color: #757575;
   border-radius: 15px 50px 50px 15px;
 }
-.kidsHover:hover{
+
+.kidsHover:hover {
   background-color: #8AD9BB;
   padding: 6px 0 6px 0;
   color: #757575;
   border-radius: 15px;
 }
+
 .studentNav, a:hover {
   text-decoration: none;
 }
+
 .text-box-one, .text-box-two {
   background-color: #F88E79;
   height: 100px;
@@ -321,6 +391,7 @@ a.btn-login{
   text-align: center;
   padding-top: 30px;
 }
+
 .quotes {
   background-color: #FFFFFF;
   height: 500px;
@@ -328,9 +399,11 @@ a.btn-login{
   font-size: 18px;
   overflow: auto;
 }
+
 .snippet-titles {
   color: #8AD9BB;
 }
+
 .title {
   border-left: 2px solid #8AD9BB;
   border-bottom: 2px solid #8AD9BB;
@@ -341,9 +414,11 @@ a.btn-login{
   font-weight: bold;
   margin-left: 30px;
 }
+
 .snippet {
   margin-left: 30px;
 }
+
 .box {
   display: inline-block;
   float: left;
@@ -354,17 +429,28 @@ a.btn-login{
   bottom: 100px;
   left: 50px;
 }
-#search{
+
+#search {
   position: relative;
   float: right;
   padding-bottom: 30px;
   left: 70px;
   bottom: 50px;
 }
+
+#search {
+  position: relative;
+  float: right;
+  padding-bottom: 30px;
+  left: 70px;
+  bottom: 50px;
+}
+
 .footer-top {
   text-align: right;
   border-bottom: 1px solid #F88E79;
 }
+
 .footer-name-slogan {
   display: flex;
   flex-direction: row;
@@ -373,45 +459,56 @@ a.btn-login{
   padding-top: 10px;
   margin-right: 20px;
 }
+
 .footer-nav {
   text-align: left;
   display: flex;
   flex-direction: row;
   margin: 0;
 }
+
 .footer-nav li {
   padding: 10px 30px;
 }
-.footer-nav a{
+
+.footer-nav a {
   color: white;
 }
-li.co-name{
+
+li.co-name {
   font-size: 20px;
   padding-right: 15px;
 }
+
 .student-name {
   font-size: 26px;
   border-bottom: 1px solid #8AD9BB;
   margin: 10px 0 10px 10px;
   padding: 10px;
 }
+
 .content-container {
   text-align: left;
 }
+
 .student-image img {
   max-height: 200px;
 }
+
 .guardian-info {
   font-size: 18px;
 }
-.student-guardian-info,  {
-  background: rgba(138,217,187,.2);
+
+.student-guardian-info, .student-report-info {
+  background: rgba(138, 217, 187, .2);
+  >>>>>>>andrew
   /*border-bottom: 1px solid #8AD9BB;*/
   margin: 10px 0 10px 10px;
   padding: 10px;
   color: #757575;
   font-size: 15px;
 }
+
 .report-title {
   font-size: 26px;
   border-bottom: 1px solid #8AD9BB;
@@ -419,8 +516,9 @@ li.co-name{
   margin: 10px 0 10px 10px;
   padding: 10px;
 }
+
 .student-guardian-info, .report-info {
-  background: rgba(138,217,187,.2);
+  background: rgba(138, 217, 187, .2);
   /*border-bottom: 1px solid #8AD9BB;*/
   margin: 10px 0 10px 10px;
   padding: 10px;
@@ -433,12 +531,13 @@ li.co-name{
   margin: 4px;
 }
 
-.theReport{
+.theReport {
   position: relative;
   left: 170px;
   bottom: 75px;
 }
-.coolKids{
+
+.coolKids {
   border: 2px solid #8AD9BB;
   border-radius: 5px;
   padding: 5px;
@@ -446,45 +545,86 @@ li.co-name{
   text-align: center;
 }
 
+
 /* Delete and Add CSS */
 
 .newStudenth1 {
-   margin-top: 78px;
-   text-align: center;
-   color: black;
-   font-size: 24pt;
-   color: #F88E79;
- }
+  margin-top: 78px;
+  text-align: center;
+  color: black;
+  font-size: 24pt;
+  color: #F88E79;
+}
 
- .student_form {
-   text-align: center;
- }
+.student_form {
+  text-align: center;
+}
 
- .student_form input {
-   margin: 2px;
-   border-radius: 2px;
- }
+.student_form input {
+  margin: 2px;
+  border-radius: 2px;
+}
 
- input.submit-student {
-   color: #FFFFFF;
-   background-color: #F88E79;
-   border: 2px solid #F88E79;
-   font-size: 18px;
-   margin: 15px;
-   padding: 5px 20px;
-   border-radius: 50px;
- text-decoration: none;
- }
+input.submit-student {
+  color: #FFFFFF;
+  background-color: #F88E79;
+  border: 2px solid #F88E79;
+  font-size: 18px;
+  margin: 15px;
+  padding: 5px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+}
 
- .student_form a {
-   background-color: none;
-   color: #FFFFFF;
- }
+.student_form a {
+  background-color: none;
+  color: #FFFFFF;
+}
 
- .delete-name {
-   margin-top: 60px;
- }
+.delete-name {
+  margin-top: 60px;
+}
 
- .logout-area {
- margin-top: 19px;
+.logout-area {
+  margin-top: 19px;
+}
+
+.search-keyword {
+  border: 2px solid #8AD9BB;
+  border-radius: 50px;
+  padding: 10px 60px 10px 30px;
+}
+
+#vitals-textarea, #notes-textarea, #symptoms-textarea {
+  width: 500px;
+  height: 300px;
+  border: 2px solid #8AD9BB;
+}
+
+.btn-primary {
+  background-color: #8AD9BB;
+  color: white;
+  border: 2px solid #8AD9BB;
+  border-radius: 25px;
+}
+
+.btn-primary:active {
+  color: white;
+  background-color: #8AD9BB;
+}
+
+.btn-primary:visited {
+  color: white;
+  background-color: #8AD9BB;
+}
+
+.btn-primary:hover {
+  background-color: white;
+  color: #8AD9BB;
+  border: 2px solid #8AD9BB;
+  border-radius: 25px;
+}
+
+.btn-primary:active {
+  color: white;
 }
