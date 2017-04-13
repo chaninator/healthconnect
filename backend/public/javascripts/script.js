@@ -61,12 +61,4 @@ $(document).ready(function() {
       $('#modal-report6').modal('show');
     }
   });
-  $('#guardDrop').on('click', function(e){
-    e.preventDefault();
-    if ($('.dropMenu').hasClass('hidden')){
-        $('.dropMenu').show();
-    } else{
-      $('.dropMenu').hide();
-    }
-  });
 });
