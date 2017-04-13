@@ -74,12 +74,6 @@ footer h4 {
   overflow: auto;
 }
 
-.funny {
-=======
-/*.funny{
->>>>>>> samK
-  padding-top: 30px;
-}*/
 
 .right, .left {
   color: #757575;
@@ -102,8 +96,6 @@ footer h4 {
   align-items: center;
 }
 
-<<<<<<< HEAD
-=======
 section {
   height: 100vh;
   background-image: url(../images/kiwi.svg);
@@ -113,7 +105,6 @@ section {
   padding: 90px 20px 0 90px;
 }
 
->>>>>>> samK
 #landing {
   height: 70vh;
   background-image: url(../images/kiwi.svg);
@@ -259,7 +250,7 @@ li {
 
 #search-keyword{
   outline: none;
-  border: 0px;
+  border: 2px line #757575;
   border-radius: 5px;
   height: 40px;
   width: 180px;
@@ -524,5 +515,4 @@ li.co-name{
   padding: 5px;
   margin-top: 10px;
   text-align: center;
-
 }
