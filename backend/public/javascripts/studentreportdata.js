@@ -9,7 +9,7 @@ $('.show-student-report').on('click',function(e){
   $('#myModal').modal('show');
   var index = $(this).attr('id');
   console.log(index);
-
+  console.log("hi :", window.location.href);
   $.ajax({
     url: window.location.href,
     method: 'POST',

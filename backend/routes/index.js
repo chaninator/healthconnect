@@ -49,7 +49,7 @@ router.get('/studentProfile/:id', function(req, res, next) {
 });
 
 
-//modul pop up for particular student report. THANKS CHARLIE
+//modal pop up for particular student report. THANKS CHARLIE
 router.post('/studentProfile/:id', function(req, res, next) {
   var index = req.body.index;
   console.log(index);
@@ -97,10 +97,6 @@ router.post('/createreport/:id', function(req, res, next) {
       res.redirect('/nurses');
     });
   });
-});
-
-router.get('/guardian', function(req, res, next) {
-  res.render('guardian');
 });
 
 router.get('/guardian', ensureLoggedIn, function(req, res, next) {

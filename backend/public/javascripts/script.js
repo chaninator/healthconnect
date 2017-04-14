@@ -60,6 +60,4 @@ $('.btn-notes-next').on('click', function(e) {
   $('#report-symptoms').text(symptoms);
   $('#report-notes').text(notes);
 });
-
-
 });
