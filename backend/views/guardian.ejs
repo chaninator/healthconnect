@@ -1,4 +1,5 @@
 <% include partials/header %>
+<script src="/javascripts/studentreportdata.js"></script>
     <section>
       <div class="opac">
       <div class="container">
@@ -28,21 +29,52 @@
           <br>Phone: <%= guardian_number %>
           <br>Email: <%= guardian_email %></div>
         <div class="report-title">Medical History </div>
-          <div class="report-info"><%= medicalHistory %></div>
+        <div class="report-info"><%= medicalHistory %></div>
         <div class="report-title">Allergies </div>
-          <div class="report-info"><%= allergies %></div>
+        <div class="report-info"><%= allergies %></div>
         <div class="report-title">Immunizations </div>
-          <div class="report-info"><%= immunizations %></div>
-        <h3>Reports</h3>
+        <div class="report-info"><%= immunizations %></div>
+        <div class="report-title">Reports</div>
         <% for (var i=0, x=reports.length; i<x; i++) { %>
           <p><a class="show-student-report" href="" id="<%= i %>"><%= reports[i].date %></a>
-        <p><a id="generate-report" href="/createreport/<%=id%>">Create New Report</a></p>
         <% } %>
     </div>
     </div>
   </div>
   </div>
   </div>
+
+  <!-- The Modal -->
+  <div class="modal animated fadeIn" id="myModal">
+      <div class="vertical-alignment-helper">
+          <div class="modal-dialog modal-lg vertical-align-center">
+              <div class="modal-content">
+                  <div class="modal-header">
+                  </div>
+                  <div class="modal-body row">
+                      <div class="col-md-1"></div>
+                      <div class="col-md-2 modal-desc">
+                          <span class="modal-text">Report</span>
+                      </div>
+                      <div class="col-md-1"></div>
+                      <div class="col-md-8">
+                          <img src="<%= image %>" alt="student picture">
+                          <div style="padding: 10px; font-size: 20px">
+                              <%= name %>
+                          </div>
+                          <div>
+                            <ul class="reportlist">
+                            </ul>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="modal-footer">
+              </div>
+          </div>
+      </div>
+  </div>
+
     </section>
 
     <% include partials/footer %>

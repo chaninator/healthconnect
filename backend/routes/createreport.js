@@ -1,6 +1,5 @@
 var express = require('express');
 var router = express.Router();
-
 var Student = require('../models/student')
 
 // router.post('/:studentId', function(req, res, next) {
