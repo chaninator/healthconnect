@@ -12,7 +12,11 @@ var env = {
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index');
+  res.render('index', { title: 'Health Connect', env: env });
+});
+
+router.get('/doctor', function(req, res, next) {
+  res.render('doctor');
 });
 
 router.get('/nurses', function(req, res, next) {
@@ -28,9 +32,8 @@ router.get('/nurses', function(req, res, next) {
 //brings up a specific student and renders information
 router.get('/studentProfile/:id', function(req, res, next) {
   Student.findById(req.params.id, function(err, student) {
-    if (err) {
-      console.log('err: ', err);
-    }
+    if (err) console.log('err: ', err);
+
     res.render('studentProfile', {
       image: student.image,
       name: student.name,
@@ -58,7 +61,7 @@ router.post('/studentProfile/:id', function(req, res, next) {
   Student.findOne({ _id: req.params.id } , function(error,student){
     console.log(student.report[index]);
     res.json(student.report[index]);
-  })
+  });
 });
 
 router.get('/createreport/:id', function(req, res, next) {
@@ -101,19 +104,30 @@ router.post('/createreport/:id', function(req, res, next) {
 
 router.get('/guardian', ensureLoggedIn, function(req, res, next) {
   console.log(req.user.displayName);
-  Student.findOne({ guardian_email: req.user.displayName }, function(err, student) {
-  res.render('guardian', {
-    image: student.image,
-    name: student.name,
-    birthdate: student.dob,
-    guardian: student.guardian_name,
-    guardian_number: student.guardian_number,
-    guardian_email: student.guardian_email,
-    medicalHistory: student.medications,
-    allergies: student.allergies,
-    immunizations: student.immunizations,
-    reports: student.report
+  let suzieQ = Student.findOne({ guardian_email: req.user.displayName });
+  suzieQ.exec()
+    .then((student) => {
+      if (student) {
+        res.render('guardian', {
+          image: student.image,
+          name: student.name,
+          birthdate: student.dob,
+          guardian: student.guardian_name,
+          guardian_number: student.guardian_number,
+          guardian_email: student.guardian_email,
+          medicalHistory: student.medications,
+          allergies: student.allergies,
+          immunizations: student.immunizations,
+          reports: student.report
+        });
+      } else {
+        res.render('error', { message: 'You don\'t have a child' });
+      }
+    })
+    .catch((e) => {
+      res.render('error', {error: e});
     });
+<<<<<<< HEAD
   });
 });
 
@@ -171,12 +185,14 @@ router.get('/doctor', function(req, res, next) {
   res.render('doctor');
 });
 
-router.get('/login',
-  function(req, res){
-    res.render('login', { env: env });
-  });
 
-router.get('/logout', function(req, res){
+router.get('/login',
+  function(req, res) {
+    res.render('login', { env: env });
+  }
+);
+
+router.get('/logout', function(req, res) {
   req.logout();
   res.redirect('/');
 });
@@ -184,10 +200,12 @@ router.get('/logout', function(req, res){
 router.get('/callback',
   passport.authenticate('auth0', { failureRedirect: '/url-if-something-fails' }),
   function(req, res) {
+
     // res.json(res);
     res.redirect(req.session.returnTo || '/user');
     // console.log('req4: ', req);
     console.log('res4: ', res);
   });
+
 
 module.exports = router;
