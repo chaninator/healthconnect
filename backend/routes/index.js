@@ -10,8 +10,6 @@ var env = {
   AUTH0_CALLBACK_URL: process.env.AUTH0_CALLBACK_URL || 'http://localhost:3000/callback'
 };
 
-
-
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index');
@@ -27,8 +25,7 @@ router.get('/nurses', function(req, res, next) {
   })
 });
 
-
-
+//brings up a specific student and renders information
 router.get('/studentProfile/:id', function(req, res, next) {
   Student.findById(req.params.id, function(err, student) {
     if (err) {
@@ -50,16 +47,18 @@ router.get('/studentProfile/:id', function(req, res, next) {
   })
 });
 
-// router.get('/createreport/:id', function(req, res, next) {
-//   Student.findById(req.params.id, function(err, student) {
-//     console.log('I am the req.params.id, ', req.params.id);
-//     if (err) { console.log('err: ', err) }
-//     res.render('createreport', {
-//       name: student.name,
-//       image: student.image
-//     })
-//   })
-// });
+
+//modul pop up for particular student report. THANKS CHARLIE
+router.post('/studentProfile/:id', function(req, res, next) {
+  var index = req.body.index;
+  console.log(index);
+  console.log(req.params.id);
+
+  Student.findOne({ _id: req.params.id } , function(error,student){
+    console.log(student.report[index]);
+    res.json(student.report[index]);
+  })
+});
 
 router.get('/createreport/:id', function(req, res, next) {
   Student.findById(req.params.id, function(err, student) {
@@ -70,8 +69,10 @@ router.get('/createreport/:id', function(req, res, next) {
     });
 });
 
+// Ability to create report for a student by the nurse
 router.post('/createreport/:id', function(req, res, next) {
   console.log('id is: ', req.params.id)
+  //get a particular student ID, and then push report to database
   Student.findOne({
     _id: req.params.id
   }, function(err, student) {
@@ -81,7 +82,7 @@ router.post('/createreport/:id', function(req, res, next) {
       symptoms: req.body.symptoms,
       notes: req.body.notes,
     });
-
+    // saves the report to the student in the student schema
     student.save(function(err, student) {
       if (err) {
         res.status(500).send({
@@ -91,42 +92,11 @@ router.post('/createreport/:id', function(req, res, next) {
         console.log('Error: ', err);
       }
       console.log('student is: ', student)
-
+      // redirects to the nurses homepage
       res.redirect('/nurses');
     });
   });
 });
-
-// router.post('/createreport', function(req, res, next) {
-//   var userId = req.user.identities[0].user_id;
-//   var email = req.user._json.email;
-//
-//   console.log()
-//   console.log('id is: ', req.params.id)
-//   Student.findOne({
-//     _id: req.params.id
-//   }, function(err, student) {
-//     console.log('student is: ', student)
-//     student.report.push({
-//       date: req.body.date,
-//       vitals: req.body.vitals,
-//       symptoms: req.body.symptoms,
-//       notes: req.body.notes,
-//     });
-//
-//     student.save(function(err, student) {
-//       if (err) {
-//         res.status(500).send({
-//           status: 'Error',
-//           error: err
-//         });
-//         console.log('Error: ', err);
-//       }
-//
-//       res.json(student);
-//     });
-//   });
-// });
 
 router.get('/guardian', function(req, res, next) {
   res.render('guardian');

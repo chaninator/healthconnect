@@ -1,46 +1,80 @@
-<% include partials/header %>
 
-<section>
-<div class="opac">
-<div class="container">
-  <div class="row">
-    <div class="nav col-md-4">
-      <div class="optionsBox">
-        <nav>
-          <ul class="nav nav-pills nav-stacked left-menu" id="stacked-menu">
-            <div class="guardNav"><a href="#"><div class="navHover">Home</div></a></div>
-            <a href="#" data-target="#item1" data-toggle="collapse" data-parent="#stacked-menu" class="guardNav" id="guardDrop"><div class="navHover">Student Profile<span class="caret arrow"></span></div></a>
-              <ul class="nav nav-stacked collapse left-submenu" id="item1">
-                <li class="subNav"><a href="#"/><div class="navHover">Overview</div></a></li>
-                <li class="subNav"><a href="#"/><div class="navHover">Medical History</div></a></li>
-                <li class="subNav"><a href="#"/><div class="navHover">Create New Report</div></a></li>
-              </ul>
-            <div class="nurseNav nurseNavBottom"><a href="#"><div class="navHover">Add New Student</div></a></div>
-          </ul>
-        </nav>
-      </div>
-    </div>
-<div class="content-container col-md-5">
-  <div class="student-name"><%= name %></div>
-  <div></div>
-  <div class="student-image"><img src="<%=image%>"/></div>
-  <div class="student-report-info">Birthdate: <%= birthdate %></div>
-  <div class="student-report-title">Parent/Guardian Contact</div>
-  <div class="student-report-info"><span style="font-size: 20px;"><%= guardian %></span>
-    <br>
-    <br>Phone: <%= guardian_number %>
-    <br>Email: <%= guardian_email %></div>
-  <div class="student-report-title">Medical History</div>
-  <div class="student-report-info"><%= medicalHistory %></div>
-  <div class="student-report-title">Allergies</div>
-  <div class="student-report-info"><%= allergies %></div>
-  <div class="student-report-title">Immunizations</div>
-  <div class="student-report-info"><%= immunizations %></div>
-  <div class="student-report-title">Reports</div>
-                        <h3>Reports</h3>
+<% include partials/header %>
+<script src="/javascripts/studentreportdata.js"></script>
+
+    <section>
+        <div class="opac">
+            <div class="container">
+                <div class="row">
+                    <div class="nav col-md-4">
+                        <div class="optionsBox">
+                            <nav>
+                                <ul class="nav nav-pills nav-stacked left-menu" id="stacked-menu">
+                                    <div class="guardNav">
+                                        <a href="#">
+                                            <div class="navHover">Home</div>
+                                        </a>
+                                    </div>
+                                    <a href="#" data-target="#item1" data-toggle="collapse" data-parent="#stacked-menu" class="guardNav" id="guardDrop">
+                                        <div class="navHover">Student Profile<span class="caret arrow"></span></div>
+                                    </a>
+                                    <ul class="nav nav-stacked collapse left-submenu" id="item1">
+                                        <li class="subNav"><a href="#" />
+                                            <div class="navHover">Overview</div>
+                                            </a>
+                                        </li>
+                                        <li class="subNav"><a href="#" />
+                                            <div class="navHover">Medical History</div>
+                                            </a>
+                                        </li>
+                                        <li class="subNav"><a href="#" />
+                                            <div class="navHover">Create New Report</div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <div class="nurseNav nurseNavBottom">
+                                        <a href="#">
+                                            <div class="navHover">Add New Student</div>
+                                        </a>
+                                    </div>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="content-container col-md-5">
+                        <div class="student-name">
+                            <%= name %>
+                        </div>
+                        <div></div>
+                        <div class="student-image"><img src="<%=image%>" /></div>
+                        <div class="student-report-info">Birthdate:
+                            <%= birthdate %>
+                        </div>
+                        <div class="student-report-title">Parent/Guardian Contact</div>
+                        <div class="student-report-info"><span style="font-size: 20px;"><%= guardian %></span>
+                            <br>
+                            <br>Phone:
+                            <%= guardian_number %>
+                                <br>Email:
+                                <%= guardian_email %>
+                        </div>
+                        <div class="student-report-title">Medical History</div>
+                        <div class="student-report-info">
+                            <%= medicalHistory %>
+                        </div>
+                        <div class="student-report-title">Allergies</div>
+                        <div class="student-report-info">
+                            <%= allergies %>
+                        </div>
+                        <div class="student-report-title">Immunizations</div>
+                        <div class="student-report-info">
+                            <%= immunizations %>
+                        </div>
+                        <div class="student-report-title">Reports</div>
+
                         <% for (var i=0, x=reports.length; i<x; i++) { %>
                             <p>
-                                <a id="show-student-report" href="">
+                                <a class="show-student-report" href="" id="<%= i %>">
                                     <%= reports[i].date %>
                                 </a>
                             </p>
@@ -55,8 +89,9 @@
                 </div>
             </div>
         </div>
-        <!-- The Modal -->
 
+
+        <!-- The Modal -->
         <div class="modal animated fadeIn" id="myModal">
             <div class="vertical-alignment-helper">
                 <div class="modal-dialog modal-lg vertical-align-center">
@@ -74,16 +109,22 @@
                                 <div style="padding: 10px; font-size: 20px">
                                     <%= name %>
                                 </div>
+                                <div>
+                                  <ul class="reportlist">
+
+                                  </ul>
+
+
+                                </div>
                             </div>
                         </div>
-                        <div class="modal-footer">
-                        </div>
+                    </div>
+                    <div class="modal-footer">
                     </div>
                 </div>
             </div>
         </div>
 
-        </div>
     </section>
 
     <% include partials/footer %>
