@@ -661,3 +661,9 @@ input.submit-student {
 .add-student li {
   margin-bottom: 5px;
 }
+
+.userpic {
+  height: 150px;
+  min-width: 150px;
+  border-radius: 100px;
+}
