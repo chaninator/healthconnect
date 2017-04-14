@@ -16,6 +16,7 @@ var mongoose = require('mongoose');
 dotenv.load();
 var routes = require('./routes/index');
 var user = require('./routes/user');
+var guardian = require('./routes/guardian');
 var students = require('./routes/students');
 var nurses = require('./routes/nurses');
 var reports = require('./routes/reports');
