@@ -330,7 +330,16 @@ a.btn-login {
   background-color: inherit;
 }
 
-.nurseNav, .studentNav, .guardNav, .subNav {
+.subNav {
+  display: block;
+  text-align: left;
+  font-size: 22px;
+  border-bottom: solid 2px #8AD9BB;
+  color: #757575;
+  padding: 0 0 0 40px;
+}
+
+.nurseNav, .studentNav, .guardNav {
   display: block;
   text-align: left;
   font-size: 22px;
@@ -372,12 +381,14 @@ a.btn-login {
   border-radius: 15px 50px 50px 15px;
 }
 
+
+/*ANDREW TEST FOR NURSE NAV
 .kidsHover:hover {
   background-color: #8AD9BB;
   padding: 6px 0 6px 0;
   color: #757575;
   border-radius: 15px;
-}
+}*/
 
 .studentNav, a:hover {
   text-decoration: none;
@@ -501,7 +512,6 @@ li.co-name {
 
 .student-guardian-info, .student-report-info {
   background: rgba(138, 217, 187, .2);
-  >>>>>>>andrew
   /*border-bottom: 1px solid #8AD9BB;*/
   margin: 10px 0 10px 10px;
   padding: 10px;
@@ -545,6 +555,10 @@ li.co-name {
   text-align: center;
 }
 
+.coolKids:hover {
+  color: white;
+  background-color: #8AD9BB;
+}
 
 /* Delete and Add CSS */
 
