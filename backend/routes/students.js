@@ -60,6 +60,7 @@ router.patch('/', function(req, res, next) {
     if (err) console.log(err);
 
     student.name = req.body.name || student.name;
+    student.dob = req.body.dob || student.dob;
     student.image = req.body.image || student.image;
     student.history = req.body.history || student.history;
     student.allergies = req.body.allergies || student.allergies;
