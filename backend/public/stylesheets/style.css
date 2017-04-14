@@ -642,3 +642,22 @@ input.submit-student {
 .btn-primary:active {
   color: white;
 }
+
+.btn-logout {
+  background-color: white;
+  color: #757575;
+  border: 2px solid #757575;
+  font-size: 18px;
+  margin: 15px;
+  padding: 10px 25px;
+  border-radius: 50px;
+}
+
+.add-student-field {
+  border: 2px solid #8AD9BB;
+  padding: 10px 50px;
+}
+
+.add-student li {
+  margin-bottom: 5px;
+}
