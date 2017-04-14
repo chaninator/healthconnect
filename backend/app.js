@@ -12,6 +12,7 @@ var dotenv = require('dotenv');
 var passport = require('passport');
 var Auth0Strategy = require('passport-auth0');
 var mongoose = require('mongoose');
+mongoose.Promise = global.Promise;
 dotenv.load();
 var routes = require('./routes/index');
 var user = require('./routes/user');

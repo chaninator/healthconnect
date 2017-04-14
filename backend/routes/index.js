@@ -10,11 +10,13 @@ var env = {
   AUTH0_CALLBACK_URL: process.env.AUTH0_CALLBACK_URL || 'http://localhost:3000/callback'
 };
 
-
-
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index');
+  res.render('index', { title: 'Health Connect', env: env });
+});
+
+router.get('/doctor', function(req, res, next) {
+  res.render('doctor');
 });
 
 router.get('/nurses', function(req, res, next) {
@@ -29,9 +31,8 @@ router.get('/nurses', function(req, res, next) {
 
 router.get('/studentProfile/:id', function(req, res, next) {
   Student.findById(req.params.id, function(err, student) {
-    if (err) {
-      console.log('err: ', err);
-    }
+    if (err) console.log('err: ', err);
+
     res.render('studentProfile', {
       image: student.image,
       name: student.name,
@@ -44,9 +45,9 @@ router.get('/studentProfile/:id', function(req, res, next) {
       immunizations: student.immunizations,
       reports: student.report,
       id: student._id
-    })
-  })
-})
+    });
+  });
+});
 
 router.get('/createreport/:id', function(req, res, next) {
   Student.findById(req.params.id, function(err, student) {
@@ -60,32 +61,38 @@ router.get('/createreport/:id', function(req, res, next) {
 
 router.get('/guardian', ensureLoggedIn, function(req, res, next) {
   console.log(req.user.displayName);
-  Student.findOne({ guardian_email: req.user.displayName }, function(err, student) {
-  res.render('guardian', {
-    image: student.image,
-    name: student.name,
-    birthdate: student.dob,
-    guardian: student.guardian_name,
-    guardian_number: student.guardian_number,
-    guardian_email: student.guardian_email,
-    medicalHistory: student.medications,
-    allergies: student.allergies,
-    immunizations: student.immunizations,
-    reports: student.report
+  let suzieQ = Student.findOne({ guardian_email: req.user.displayName });
+  suzieQ.exec()
+    .then((student) => {
+      if (student) {
+        res.render('guardian', {
+          image: student.image,
+          name: student.name,
+          birthdate: student.dob,
+          guardian: student.guardian_name,
+          guardian_number: student.guardian_number,
+          guardian_email: student.guardian_email,
+          medicalHistory: student.medications,
+          allergies: student.allergies,
+          immunizations: student.immunizations,
+          reports: student.report
+        });
+      } else {
+        res.render('error', { message: 'You don\'t have a child' });
+      }
+    })
+    .catch((e) => {
+      res.render('error', {error: e});
     });
-  });
-});
-
-router.get('/doctor', function(req, res, next) {
-  res.render('doctor');
 });
 
 router.get('/login',
-  function(req, res){
+  function(req, res) {
     res.render('login', { env: env });
-  });
+  }
+);
 
-router.get('/logout', function(req, res){
+router.get('/logout', function(req, res) {
   req.logout();
   res.redirect('/');
 });
@@ -93,44 +100,8 @@ router.get('/logout', function(req, res){
 router.get('/callback',
   passport.authenticate('auth0', { failureRedirect: '/url-if-something-fails' }),
   function(req, res) {
-    // res.json(res);
     res.redirect(req.session.returnTo || '/user');
-    // console.log('req4: ', req);
-    console.log('res4: ', res);
-  });
-
-
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Health Connect', env: env });
-});
-
-router.get('/nurse', function(req, res, next) {
-  res.render('nurse');
-});
-
-
-router.get('/doctor', function(req, res, next) {
-  res.render('doctor');
-});
-
-router.get('/login',
-  function(req, res){
-    res.render('login', { env: env });
-  });
-
-router.get('/logout', function(req, res){
-  req.logout();
-  res.redirect('/');
-});
-
-router.get('/callback',
-  passport.authenticate('auth0', { failureRedirect: '/url-if-something-fails' }),
-  function(req, res) {
-    // res.json(res);
-    res.redirect('/user');
-    console.log('req4: ', req);
-    console.log('res4: ', res);
-  });
+  }
+);
 
 module.exports = router;
