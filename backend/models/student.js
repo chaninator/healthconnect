@@ -1,23 +1,16 @@
 var mongoose = require('mongoose');
 var ObjectId = mongoose.Schema.ObjectId;
+var moment = require('moment');
 
-// var date = dateFunction(){
-// return Date.now();
-// }
-
+//mongoose sub-doc of the parent schema
 var reportSchema = new mongoose.Schema({
-  date: { type: String },
+  date: { type: String, default: moment(new Date()).format('MMM Do YYYY, h:mm a') },
   vitals: { type: String, required: true },
   symptoms: { type: String, required: true },
-
-  call_notes: { type: String, required: true },
-
-  notes: { type: String, required: true },
-  // treatment_plan: { type: String, required: true }
-
+  notes: { type: String, required: true }
 });
 
-
+//parent schema
 var studentSchema = new mongoose.Schema({
   image: String,
   name: { type: String, required: true},

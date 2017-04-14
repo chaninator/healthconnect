@@ -10,12 +10,14 @@ $('.btn-report-next').on('click', function(e) {
   $('#modal-report').modal('hide');
   $('#modal-report2').modal({backdrop: 'static',
   keyboard: false},'show');
+
 });
 
 $('.btn-vitals-next').on('click', function(e) {
   e.preventDefault();
   vitals = $('#vitals-textarea').val();
   console.log('vitals: ', vitals);
+
   /* Act on the event */
   if (!vitals) {
     sweetAlert("Oops...", "Please fill out the form!", "error");
@@ -24,7 +26,6 @@ $('.btn-vitals-next').on('click', function(e) {
     $('#modal-report3').modal({backdrop: 'static',
     keyboard: false},'show');
   }
-  // $('#report-vitals').text(vitals);
 });
 
 $('.btn-symptoms-next').on('click', function(e) {
