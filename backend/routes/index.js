@@ -127,13 +127,11 @@ router.get('/guardian', ensureLoggedIn, function(req, res, next) {
     .catch((e) => {
       res.render('error', {error: e});
     });
-<<<<<<< HEAD
   });
-});
 
 router.get('/addStudent', function(req, res, next) {
   res.render('addStudent');
-})
+});
 
 router.post('/addStudent', function(req, res, next) {
 
@@ -189,13 +187,13 @@ router.get('/doctor', function(req, res, next) {
 router.get('/login',
   function(req, res) {
     res.render('login', { env: env });
-  }
-);
+  });
 
 router.get('/logout', function(req, res) {
   req.logout();
   res.redirect('/');
 });
+
 
 router.get('/callback',
   passport.authenticate('auth0', { failureRedirect: '/url-if-something-fails' }),
@@ -206,6 +204,8 @@ router.get('/callback',
     // console.log('req4: ', req);
     console.log('res4: ', res);
   });
+
+
 
 
 module.exports = router;
