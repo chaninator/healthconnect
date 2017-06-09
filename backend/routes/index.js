@@ -1,18 +1,13 @@
 var express = require('express');
 var passport = require('passport');
-var ensureLoggedIn = require('connect-ensure-login').ensureLoggedIn();
 var router = express.Router();
 var Student = require('../models/student');
 
-var env = {
-  AUTH0_CLIENT_ID: process.env.AUTH0_CLIENT_ID,
-  AUTH0_DOMAIN: process.env.AUTH0_DOMAIN,
-  AUTH0_CALLBACK_URL: process.env.AUTH0_CALLBACK_URL || 'http://localhost:3000/callback'
-};
+
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Health Connect', env: env });
+  res.render('index', { title: 'Health Connect' });
 });
 
 router.get('/doctor', function(req, res, next) {
@@ -102,6 +97,7 @@ router.post('/createreport/:id', function(req, res, next) {
   });
 });
 
+/*
 router.get('/guardian', ensureLoggedIn, function(req, res, next) {
   console.log(req.user.displayName);
   let suzieQ = Student.findOne({ guardian_email: req.user.displayName });
@@ -127,7 +123,7 @@ router.get('/guardian', ensureLoggedIn, function(req, res, next) {
     .catch((e) => {
       res.render('error', {error: e});
     });
-  });
+  }); */
 
 router.get('/addStudent', function(req, res, next) {
   res.render('addStudent');
@@ -186,7 +182,7 @@ router.get('/doctor', function(req, res, next) {
 
 router.get('/login',
   function(req, res) {
-    res.render('login', { env: env });
+    res.render('user');
   });
 
 router.get('/logout', function(req, res) {
