@@ -105,11 +105,15 @@ section {
 }
 
 #landing {
-  height: 70vh;
+  height: 570px;
   background-image: url(../images/kiwi.svg);
   background-size: cover;
   margin: 0 auto;
   overflow: auto;
+  padding: 80px 0;
+}
+
+.user-landing {
   padding: 80px 0;
 }
 
@@ -124,7 +128,30 @@ section {
 }
 
 .opac {
-  height: 80%;
+  height: 100%;
+  margin: 0 93px 0 93px;
+  background: rgba(255, 255, 255, .7);
+  border-radius: 0 0 20px 20px;
+  text-align: center;
+  padding-top: 100px;
+}
+
+.nurses-container {
+  max-width: 950px;
+}
+
+.nurses-opac {
+  height: 100%;
+  margin: 0 93px 0 93px;
+  background: rgba(255, 255, 255, .7);
+  border-radius: 0 0 20px 20px;
+  text-align: center;
+  padding-top: 100px;
+  overflow: auto;
+}
+
+.student-opac {
+  height: 100%;
   margin: 0 93px 0 93px;
   background: rgba(255, 255, 255, .7);
   border-radius: 0 0 20px 20px;
@@ -142,7 +169,7 @@ section {
   justify-content: center;
   flex-direction: row;
   text-align: center;
-  margin-top: 200px;
+  margin-top: 30px;
 }
 
 div img {
@@ -360,12 +387,20 @@ a.btn-login {
   text-decoration: none;
 }
 
+.nurse-section {
+  padding-bottom: 30px;
+}
+
 .funny, .coolKids {
   display: block;
   text-align: center;
   font-size: 20px;
   color: #757575;
-  padding: 10px 0 10px 18px;
+  padding: 10px 20px 10px 18px;
+}
+
+.student-section {
+  padding-bottom: 30px;
 }
 
 .studentList {
